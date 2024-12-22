@@ -7,7 +7,7 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1439337153520-7082a56a81f4')",
+          backgroundImage: "url('/placeholder.svg')", // Using the first image
           backgroundBlendMode: "overlay",
         }}
       >
