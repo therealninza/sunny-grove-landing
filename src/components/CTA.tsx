@@ -6,13 +6,13 @@ export const CTA = () => {
     <div className="bg-accent py-16">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          Ready to Transform Your Agriculture?
+          Join Our Innovative Project
         </h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Join the sustainable farming revolution today. Our experts are ready to help you get started with your solar-powered greenhouse.
+          Contribute to sustainable agriculture while earning Bitcoin rewards through our solar-powered mining operations.
         </p>
         <Button className="bg-white text-accent hover:bg-white/90 px-8 py-6">
-          Contact Us Now
+          Become a Contributor
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </div>
