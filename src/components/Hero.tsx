@@ -20,7 +20,7 @@ export const Hero = () => {
             Solar-Powered Greenhouse Mining Project
           </h1>
           <p className="text-xl text-white/90 mb-8">
-            Join our innovative project combining solar energy, ASIC mining, and year-round food production. 
+            A greenhouse combining solar energy and ASIC mining to provide year-round food production. 
             Contribute to sustainable agriculture and earn Bitcoin rewards from our mining operations.
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
