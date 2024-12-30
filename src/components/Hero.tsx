@@ -1,5 +1,6 @@
 import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { VinylPlayer } from "@/components/VinylPlayer";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,6 +19,11 @@ export const Hero = () => {
         }}
       >
         <div className="absolute inset-0 bg-black/40" />
+      </div>
+      
+      {/* VinylPlayer positioned in top right */}
+      <div className="absolute top-4 right-4 z-20">
+        <VinylPlayer />
       </div>
       
       <div className="container mx-auto px-4 z-10">
