@@ -1,5 +1,11 @@
-import { ArrowRight, Bitcoin, Cpu, Sun } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Hero = () => {
   return (
@@ -7,7 +13,7 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843')", // Updated image URL
+          backgroundImage: "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843')",
           backgroundBlendMode: "overlay",
         }}
       >
@@ -38,10 +44,32 @@ export const Hero = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-6">
-              Join the Project
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-6">
+                  Join the Project
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white">
+                <DropdownMenuItem className="cursor-pointer">
+                  <Twitter className="mr-2 h-4 w-4" />
+                  <span>Twitter</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <Bitcoin className="mr-2 h-4 w-4" />
+                  <span>Nostr</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <ArrowRight className="mr-2 h-4 w-4" />
+                  <span>Telegram</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer">
+                  <Github className="mr-2 h-4 w-4" />
+                  <span>GitHub</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 px-6 py-6">
               Learn More
             </Button>
