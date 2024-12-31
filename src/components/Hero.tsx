@@ -25,7 +25,7 @@ export const Hero = () => {
       </div>
       
       {/* Tickers positioned in top left */}
-      <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
+      <div className="absolute top-4 left-4 z-20 flex flex-row gap-2">
         <BitcoinTicker />
         <BlockHeightTicker />
         <SolarTicker />
