@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
 import { BlockHeightTicker } from "@/components/BlockHeightTicker";
+import { SolarTicker } from "@/components/SolarTicker";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,10 +24,11 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
-      {/* BitcoinTicker positioned in top left */}
+      {/* Tickers positioned in top left */}
       <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
         <BitcoinTicker />
         <BlockHeightTicker />
+        <SolarTicker />
       </div>
 
       {/* VinylPlayer positioned in top right */}
