@@ -31,14 +31,14 @@ export const VinylPlayer = () => {
   };
 
   return (
-    <div className="relative w-full max-w-md mx-auto my-8 bg-black/30 backdrop-blur-sm rounded-full">
+    <div className="relative w-full max-w-md mx-auto my-8">
       {/* Vinyl Record Animation */}
       <div className={`relative w-64 h-64 mx-auto mb-4 ${isPlaying ? 'animate-spin' : ''}`} 
            style={{ animationDuration: '4s', transformOrigin: 'center' }}>
-        <div className="absolute inset-0 rounded-full bg-black/50 shadow-lg">
-          <div className="absolute inset-4 rounded-full bg-gradient-to-br from-gray-800/50 to-gray-900/50">
-            <div className="absolute inset-8 rounded-full bg-gradient-to-br from-gray-700/50 to-gray-800/50">
-              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-gray-600/50 to-gray-700/50" />
+        <div className="absolute inset-0 rounded-full bg-black shadow-lg">
+          <div className="absolute inset-4 rounded-full bg-gradient-to-br from-gray-800 to-gray-900">
+            <div className="absolute inset-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-800">
+              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-gray-600 to-gray-700" />
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export const VinylPlayer = () => {
       {/* Play/Pause Button */}
       <Button
         onClick={togglePlay}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-12 h-12 bg-accent/70 hover:bg-accent/90"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-12 h-12 bg-accent hover:bg-accent/90"
       >
         {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
       </Button>
