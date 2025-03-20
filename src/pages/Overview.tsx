@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Bitcoin, Cpu, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -107,7 +106,7 @@ const Overview = () => {
                     <h4 className="text-xl font-bold mb-2">Islands Wellness Society (IWS)</h4>
                     <p className="mb-2"><strong>Focus:</strong> Providing various services to promote empowerment, overcome trauma, address violence, promote equality, and enrich the lives of children and families on Haida Gwaii.</p>
                     <p className="mb-2"><strong>Key Programs:</strong> Child Care Resource and Referral, Child and Youth Counselling (PEACE Program), Community-Based Victim Services/STV Outreach Program, Women's Counselling, Feed the People Food Bank.</p>
-                    <p><strong>Location:</strong> Queen Charlotte, British Columbia, Canada.</p>
+                    <p><strong>Location:</strong> Haida Gwaii</p>
                   </div>
                 </div>
               </div>
