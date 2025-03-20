@@ -23,7 +23,7 @@ const Overview = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Rise Together First Nations</h1>
           <p className="text-xl mb-6 max-w-4xl">
-            "Growing Together: An Indoor Community Garden for Frog Lake First Nation"
+            "Growing Together: An Indoor Community Garden for Haida Nation"
           </p>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
@@ -47,28 +47,28 @@ const Overview = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           <section>
             <p className="text-lg mb-6">
-              Imagine a space in Frog Lake where the community can come together year-round to grow fresh food, learn traditional practices, and strengthen bonds across generations. An indoor community garden could transform how Frog Lake connects with the land, preserves culture, and supports wellness—all in one green, thriving space.
+              Imagine a space in Haida Gwaii where the community can come together year-round to grow fresh food, learn traditional practices, and strengthen bonds across generations. An indoor community garden could transform how Haida Gwaii connects with the land, preserves culture, and supports wellness—all in one green, thriving space.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Year-Round Access to Fresh Food</h2>
             <p className="mb-6">
-              With an indoor garden, Frog Lake residents wouldn't have to rely on expensive, store-bought produce, especially during the colder months. Growing fresh vegetables and herbs indoors, right in the heart of the community, means healthy food is available no matter the season. This supports healthier lifestyles and food sovereignty, helping the community become more self-sufficient.
+              With an indoor garden, Haida Gwaii residents wouldn't have to rely on expensive, store-bought produce, especially during the colder months. Growing fresh vegetables and herbs indoors, right in the heart of the community, means healthy food is available no matter the season. This supports healthier lifestyles and food sovereignty, helping the community become more self-sufficient.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">A Living Classroom of Tradition and Knowledge</h2>
             <p className="mb-6">
-              An indoor garden would be a perfect space for elders to pass down knowledge of traditional foods, native plants, and sustainable growing practices. Younger generations could learn hands-on about their heritage and gain valuable skills, from planting to harvesting. This garden wouldn't just grow food; it would cultivate cultural pride and a deep connection to Frog Lake's roots.
+              An indoor garden would be a perfect space for elders to pass down knowledge of traditional foods, native plants, and sustainable growing practices. Younger generations could learn hands-on about their heritage and gain valuable skills, from planting to harvesting. This garden wouldn't just grow food; it would cultivate cultural pride and a deep connection to Haida Gwaii's roots.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Strengthening Community Bonds</h2>
             <p className="mb-6">
-              Gardens bring people together, and an indoor community garden would become a shared space for Frog Lake. Elders, youth, families, and friends could work side by side, creating stronger connections while contributing to something meaningful. It's a project where everyone's efforts, big or small, contribute to the whole community.
+              Gardens bring people together, and an indoor community garden would become a shared space for Haida Gwaii. Elders, youth, families, and friends could work side by side, creating stronger connections while contributing to something meaningful. It's a project where everyone's efforts, big or small, contribute to the whole community.
             </p>
           </section>
 
@@ -82,10 +82,10 @@ const Overview = () => {
           <section>
             <h2 className="text-2xl font-bold mb-4">A Blend of Traditional and Modern Skills</h2>
             <p className="mb-6">
-              Frog Lake's indoor community garden could blend traditional knowledge with modern growing techniques like hydroponics. Learning these methods provides valuable skills for future opportunities, whether in local food production, environmental work, or beyond. This isn't just gardening—it's equipping Frog Lake's future generations with knowledge and potential career paths.
+              Haida Gwaii's indoor community garden could blend traditional knowledge with modern growing techniques like hydroponics. Learning these methods provides valuable skills for future opportunities, whether in local food production, environmental work, or beyond. This isn't just gardening—it's equipping Haida Gwaii's future generations with knowledge and potential career paths.
             </p>
             <p className="mb-6">
-              An indoor community garden for Frog Lake First Nation would be more than a project; it would be an investment in health, culture, and unity. Let's bring fresh food, tradition, and community connection to Frog Lake all year long, and watch the seeds of today grow into a stronger, healthier tomorrow.
+              An indoor community garden for Haida Nation would be more than a project; it would be an investment in health, culture, and unity. Let's bring fresh food, tradition, and community connection to Haida Gwaii all year long, and watch the seeds of today grow into a stronger, healthier tomorrow.
             </p>
           </section>
 
