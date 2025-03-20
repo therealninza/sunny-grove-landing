@@ -1,9 +1,11 @@
+
 import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
 import { BlockHeightTicker } from "@/components/BlockHeightTicker";
 import { SolarTicker } from "@/components/SolarTicker";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -86,9 +88,11 @@ export const Hero = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 px-6 py-6">
-              Learn More
-            </Button>
+            <Link to="/overview">
+              <Button variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 px-6 py-6">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
