@@ -41,7 +41,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-2xl animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Frog House - A Solar-Powered Greenhouse Mining Project
+            Frog Chilling Place - A bitcoin powered greenhouse
           </h1>
           <p className="text-xl text-white/90 mb-8">
             A greenhouse combining solar energy and ASIC mining to provide year-round food production. 
