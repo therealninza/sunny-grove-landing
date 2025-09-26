@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
@@ -61,7 +61,18 @@ export const Hero = () => {
               <span className="text-white">Bitcoin Rewards</span>
             </div>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
+            <a 
+              href="https://geyser.fund/project/bitcoingreenhouse" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-6">
+                <Heart className="mr-2 h-5 w-5" />
+                Support Our Fundraising
+              </Button>
+            </a>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button className="bg-accent hover:bg-accent/90 text-white px-6 py-6">
