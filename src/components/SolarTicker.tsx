@@ -83,21 +83,15 @@ export const SolarTicker = () => {
 
       <Popover>
         <PopoverTrigger asChild>
-          <a 
-            href={`https://mempool.space/address/${BITCOIN_ADDRESS}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.preventDefault()}
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="h-6 px-2 text-xs bg-orange-500/20 hover:bg-orange-500/30 text-white border-orange-500/30"
+            onClick={() => window.open(`https://mempool.space/address/${BITCOIN_ADDRESS}`, '_blank')}
           >
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              className="h-6 px-2 text-xs bg-orange-500/20 hover:bg-orange-500/30 text-white border-orange-500/30"
-            >
-              <Wallet className="h-3 w-3 mr-1" />
-              {btcBalance !== null ? `${btcBalance.toFixed(8)} BTC` : "Loading..."}
-            </Button>
-          </a>
+            <Wallet className="h-3 w-3 mr-1" />
+            {btcBalance !== null ? `${btcBalance.toFixed(8)} BTC` : "Loading..."}
+          </Button>
         </PopoverTrigger>
         <PopoverContent className="w-64 p-4">
           <div className="space-y-3 flex flex-col items-center">
