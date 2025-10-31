@@ -92,7 +92,10 @@ export const Hero = () => {
                   <Bitcoin className="mr-2 h-4 w-4" />
                   <span>Nostr</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem 
+                  className="cursor-pointer"
+                  onClick={() => window.open('https://t.co/jmKnpjcBS2', '_blank')}
+                >
                   <ArrowRight className="mr-2 h-4 w-4" />
                   <span>Telegram</span>
                 </DropdownMenuItem>
