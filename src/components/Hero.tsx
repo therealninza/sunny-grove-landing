@@ -81,7 +81,10 @@ export const Hero = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-white">
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem 
+                  className="cursor-pointer"
+                  onClick={() => window.open('https://x.com/btcgreenhouse', '_blank')}
+                >
                   <Twitter className="mr-2 h-4 w-4" />
                   <span>Twitter</span>
                 </DropdownMenuItem>
