@@ -96,10 +96,10 @@ const Overview = () => {
                 <h3 className="text-2xl font-bold mb-4">Local Organizations</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-muted p-6 rounded-lg">
-                    <h4 className="text-xl font-bold mb-2">Farm to School Program</h4>
+                    <h4 className="text-xl font-bold mb-2">Food to School Program</h4>
                     <p className="mb-2"><strong>Focus:</strong> Connecting schools with local farms to provide fresh, healthy food to students.</p>
                     <p className="mb-2"><strong>Activities:</strong> Local food sourcing, educational opportunities, community engagement, health benefits.</p>
-                    <p><strong>Reach:</strong> Supports over 74,000 schools across the United States.</p>
+                    <p><strong>Reach:</strong> Provide Haida Gwaiis locals schools with locally grown food</p>
                   </div>
                   
                   <div className="bg-muted p-6 rounded-lg">
