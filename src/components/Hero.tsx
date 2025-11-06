@@ -99,7 +99,10 @@ export const Hero = () => {
                   <ArrowRight className="mr-2 h-4 w-4" />
                   <span>Telegram</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem 
+                  className="cursor-pointer"
+                  onClick={() => window.open('https://github.com/therealninza/sunny-grove-landing', '_blank')}
+                >
                   <Github className="mr-2 h-4 w-4" />
                   <span>GitHub</span>
                 </DropdownMenuItem>
