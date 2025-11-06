@@ -88,7 +88,10 @@ export const Hero = () => {
                   <Twitter className="mr-2 h-4 w-4" />
                   <span>Twitter</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="cursor-pointer">
+                <DropdownMenuItem 
+                  className="cursor-pointer"
+                  onClick={() => window.open('https://njump.me/npub1m32waq4klf2m065xet5kpd4zph7z8g46wlza2f7q4dhmrzvul8qsjwefzq', '_blank')}
+                >
                   <Bitcoin className="mr-2 h-4 w-4" />
                   <span>Nostr</span>
                 </DropdownMenuItem>
