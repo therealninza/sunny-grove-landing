@@ -90,19 +90,33 @@ const Overview = () => {
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Research & Innovation</h2>
-            <div className="bg-muted p-6 rounded-lg">
-              <p className="mb-4">
-                Our approach is informed by cutting-edge research in sustainable food production. Data centers generate significant heat that can be repurposed for greenhouse heating, especially valuable in sub-arctic regions.
-              </p>
-              <a 
-                href="https://www.sciencedirect.com/science/article/pii/S0360544220322763" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
-              >
-                Read: "Data center heated greenhouses, a matter for enhanced food self-sufficiency in sub-arctic regions"
-                <span className="text-xs">↗</span>
-              </a>
+            <div className="bg-muted p-6 rounded-lg space-y-4">
+              <div>
+                <p className="mb-4">
+                  Our approach is informed by cutting-edge research in sustainable food production. Data centers generate significant heat that can be repurposed for greenhouse heating, especially valuable in sub-arctic regions.
+                </p>
+                <a 
+                  href="https://www.sciencedirect.com/science/article/pii/S0360544220322763" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                >
+                  Read: "Data center heated greenhouses, a matter for enhanced food self-sufficiency in sub-arctic regions"
+                  <span className="text-xs">↗</span>
+                </a>
+              </div>
+              <div className="pt-4 border-t border-border">
+                <p className="mb-3 font-semibold">Learn more about our project:</p>
+                <a 
+                  href="https://bitcoin-greenhouse.gitbook.io/bitcoin-greenhouse-docs/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                >
+                  Bitcoin Greenhouse Documentation
+                  <span className="text-xs">↗</span>
+                </a>
+              </div>
             </div>
           </section>
 
