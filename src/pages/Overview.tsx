@@ -89,6 +89,24 @@ const Overview = () => {
           </section>
 
           <section>
+            <h2 className="text-2xl font-bold mb-4">Research & Innovation</h2>
+            <div className="bg-muted p-6 rounded-lg">
+              <p className="mb-4">
+                Our approach is informed by cutting-edge research in sustainable food production. Data centers generate significant heat that can be repurposed for greenhouse heating, especially valuable in sub-arctic regions.
+              </p>
+              <a 
+                href="https://www.sciencedirect.com/science/article/pii/S0360544220322763" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+              >
+                Read: "Data center heated greenhouses, a matter for enhanced food self-sufficiency in sub-arctic regions"
+                <span className="text-xs">↗</span>
+              </a>
+            </div>
+          </section>
+
+          <section>
             <h2 className="text-3xl font-bold mb-6">Frog Chilling Greenhouse Project</h2>
             
             <div className="space-y-8">
