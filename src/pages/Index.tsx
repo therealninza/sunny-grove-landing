@@ -23,7 +23,16 @@ const Index = () => {
                 className="w-full h-full object-cover"
               />
             </AspectRatio>
-            <p className="mt-3 text-sm text-foreground/70">3D model of our planned greenhouse structure</p>
+            <div className="mt-3 flex items-center justify-center gap-4">
+              <p className="text-sm text-foreground/70">3D model of our planned greenhouse structure</p>
+              <a 
+                href="/greenhouse_2.blend" 
+                download 
+                className="text-sm text-accent hover:text-accent/80 underline transition-colors"
+              >
+                Download Blender File
+              </a>
+            </div>
           </div>
         </div>
       </div>
