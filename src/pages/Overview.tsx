@@ -1,6 +1,7 @@
 import { ArrowLeft, Bitcoin, Cpu, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Overview = () => {
   return (
@@ -43,8 +44,15 @@ const Overview = () => {
 
       {/* Main content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <section>
+        <div className="max-w-4xl mx-auto">
+          <Tabs defaultValue="overview" className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="overview">Project Overview</TabsTrigger>
+              <TabsTrigger value="bitcoin">What is Bitcoin</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="overview" className="space-y-12">
+              <section>
             <p className="text-lg mb-6">
               Imagine a space in Haida Gwaii where the community can come together year-round to grow fresh food, learn traditional practices, and strengthen bonds across generations. An indoor community garden could transform how Haida Gwaii connects with the land, preserves culture, and supports wellness—all in one green, thriving space.
             </p>
@@ -265,6 +273,43 @@ const Overview = () => {
               </div>
             </div>
           </section>
+            </TabsContent>
+            
+            <TabsContent value="bitcoin" className="space-y-6">
+              <section>
+                <h2 className="text-2xl font-bold mb-4">Bitcoin is the Mycelium of Money</h2>
+                <div className="bg-muted p-6 rounded-lg">
+                  <p className="text-lg text-foreground/70 leading-relaxed mb-6">
+                    Understanding Bitcoin is fundamental to understanding our project's vision. Just as mycelium networks connect and nourish entire ecosystems underground, Bitcoin creates a decentralized network that connects economic activity worldwide.
+                  </p>
+                  <p className="text-foreground/70 mb-6">
+                    This insightful article by Brandon Quittem explores the deep parallels between Bitcoin and nature's most efficient networking system - mycelium. It illuminates why Bitcoin represents not just a new form of money, but a fundamental shift in how we think about value, networks, and resilience.
+                  </p>
+                  <a 
+                    href="https://brandonquittem.com/bitcoin-is-the-mycelium-of-money/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-accent hover:text-accent/80 underline transition-colors text-lg font-semibold"
+                  >
+                    Read: "Bitcoin is the Mycelium of Money" by Brandon Quittem
+                    <span className="text-sm">↗</span>
+                  </a>
+                </div>
+              </section>
+              
+              <section>
+                <h2 className="text-2xl font-bold mb-4">Why This Matters for Our Greenhouse</h2>
+                <div className="space-y-4 text-foreground/70">
+                  <p>
+                    Our Bitcoin-powered greenhouse embodies these same principles of decentralization and resilience. By converting excess energy from Bitcoin mining into heat for food production, we're creating a symbiotic system that mirrors nature's efficiency.
+                  </p>
+                  <p>
+                    Just as mycelium networks share resources and information across vast distances, Bitcoin enables value transfer and coordination without central control. Our project demonstrates how this technology can support sustainable, local food production while contributing to a global monetary network.
+                  </p>
+                </div>
+              </section>
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </main>
