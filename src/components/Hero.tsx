@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
@@ -33,8 +33,17 @@ export const Hero = () => {
         <SolarTicker />
       </div>
 
-      {/* VinylPlayer positioned in top right */}
-      <div className="absolute top-4 right-4 z-20">
+      {/* VinylPlayer and Property Link positioned in top right */}
+      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+        <Link to="/property-layout">
+          <Button 
+            size="sm" 
+            className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
+          >
+            <Map className="h-4 w-4 mr-1" />
+            Property
+          </Button>
+        </Link>
         <VinylPlayer />
       </div>
       
