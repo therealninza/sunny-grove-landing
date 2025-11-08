@@ -125,11 +125,6 @@ export const Hero = () => {
                 Learn More
               </Button>
             </Link>
-            <Link to="/property-layout">
-              <Button variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20 px-6 py-6">
-                View Property
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
