@@ -22,7 +22,7 @@ const PropertyLayout = () => {
       id: "orange",
       name: "Mill",
       color: "border-orange-400",
-      description: "Processing and milling area for our harvested crops and traditional food preparation."
+      description: "Processing and milling area using excess heat for kiln and firewood drying for the community."
     },
     {
       id: "purple",
