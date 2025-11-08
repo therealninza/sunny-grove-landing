@@ -7,10 +7,16 @@ import propertyImage from "@/assets/property-layout.png";
 const PropertyLayout = () => {
   const areas = [
     {
-      id: "yellow",
+      id: "green",
       name: "Greenhouse",
-      color: "border-yellow-400",
+      color: "border-green-500",
       description: "Our main greenhouse facility where we grow fresh produce year-round using heat from Bitcoin mining operations."
+    },
+    {
+      id: "yellow",
+      name: "Orchard",
+      color: "border-yellow-400",
+      description: "Fruit orchard featuring native and adapted species for sustainable food production."
     },
     {
       id: "orange",
@@ -19,16 +25,10 @@ const PropertyLayout = () => {
       description: "Processing and milling area for our harvested crops and traditional food preparation."
     },
     {
-      id: "green",
-      name: "Paintball Field",
-      color: "border-green-500",
-      description: "Recreational paintball field area for community events and outdoor activities."
-    },
-    {
       id: "purple",
-      name: "Orchard",
+      name: "Paintball Field",
       color: "border-purple-400",
-      description: "Fruit orchard featuring native and adapted species for sustainable food production."
+      description: "Recreational paintball field area for community events and outdoor activities."
     }
   ];
 
