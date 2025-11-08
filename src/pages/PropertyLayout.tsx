@@ -63,7 +63,7 @@ const PropertyLayout = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="relative rounded-lg overflow-hidden">
+                <div className="relative rounded-lg overflow-hidden max-w-md mx-auto">
                   <img 
                     src={propertyImage} 
                     alt="Aerial view of property layout showing greenhouse, mill, orchard, and paintball field areas" 
