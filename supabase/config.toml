@@ -1,1 +1,4 @@
 project_id = "aisipwbhfmpciyqyabry"
+
+[functions.send-contributor-application]
+verify_jwt = false

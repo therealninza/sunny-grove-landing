@@ -11,21 +11,53 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export const CTA = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Application submitted!",
-      description: "We'll be in touch soon about your contribution.",
-    });
-    setName("");
-    setEmail("");
+    setIsSubmitting(true);
+
+    try {
+      console.log("Submitting contributor application:", { name, email });
+
+      const { data, error } = await supabase.functions.invoke(
+        "send-contributor-application",
+        {
+          body: { name, email },
+        }
+      );
+
+      if (error) {
+        console.error("Error sending application:", error);
+        throw error;
+      }
+
+      console.log("Application sent successfully:", data);
+
+      toast({
+        title: "Application submitted!",
+        description: "We'll be in touch soon about your contribution.",
+      });
+      
+      setName("");
+      setEmail("");
+    } catch (error) {
+      console.error("Failed to submit application:", error);
+      toast({
+        title: "Error",
+        description: "Failed to submit your application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -73,7 +105,9 @@ export const CTA = () => {
                   required
                 />
               </div>
-              <Button type="submit" className="w-full">Submit Application</Button>
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit Application"}
+              </Button>
             </form>
           </DialogContent>
         </Dialog>
