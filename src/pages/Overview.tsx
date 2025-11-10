@@ -115,26 +115,30 @@ const Overview = () => {
               </div>
               <div className="pt-4 border-t border-border">
                 <p className="mb-3 font-semibold">Learn more about our project:</p>
-                <div className="space-y-2">
-                  <a 
-                    href="https://bitcoin-greenhouse.gitbook.io/bitcoin-greenhouse-docs/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2 block"
-                  >
-                    Bitcoin Greenhouse Documentation
-                    <span className="text-xs">↗</span>
-                  </a>
-                  <a 
-                    href="https://keirnan.substack.com/p/hlkyakii-to-start-a-fire" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2 block"
-                  >
-                    "ḥłk̓yak̓ii" - To Start a Fire
-                    <span className="text-xs">↗</span>
-                  </a>
-                </div>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>
+                    <a 
+                      href="https://bitcoin-greenhouse.gitbook.io/bitcoin-greenhouse-docs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                    >
+                      Bitcoin Greenhouse Documentation
+                      <span className="text-xs">↗</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      href="https://keirnan.substack.com/p/hlkyakii-to-start-a-fire" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                    >
+                      "ḥłk̓yak̓ii" - To Start a Fire
+                      <span className="text-xs">↗</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
