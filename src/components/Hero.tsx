@@ -34,17 +34,27 @@ export const Hero = () => {
       </div>
 
       {/* VinylPlayer and Property Link positioned in top right */}
-      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
-        <Link to="/property-layout">
-          <Button 
-            size="sm" 
-            className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
-          >
-            <Map className="h-4 w-4 mr-1" />
-            Property
-          </Button>
-        </Link>
-        <VinylPlayer />
+      <div className="absolute top-4 right-4 z-20 flex flex-col items-end gap-2">
+        <div className="flex items-center gap-2">
+          <Link to="/property-layout">
+            <Button 
+              size="sm" 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20"
+            >
+              <Map className="h-4 w-4 mr-1" />
+              Property
+            </Button>
+          </Link>
+          <VinylPlayer />
+        </div>
+        <a 
+          href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-xs text-white/80 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full border border-white/20 transition-all"
+        >
+          🎙️ Podcast: Totem poles, proof of work and bitcoin
+        </a>
       </div>
       
       <div className="container mx-auto px-4 z-10">
