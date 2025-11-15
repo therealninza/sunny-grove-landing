@@ -100,9 +100,9 @@ export const VinylPlayer = () => {
   };
 
   return (
-    <div className="relative w-full max-w-[200px] mx-auto my-2 flex flex-col items-center">
+    <div className="relative w-full max-w-[120px] mx-auto my-2 flex flex-col items-center">
       {/* Vinyl Record Animation */}
-      <div className="relative w-40 h-40 mb-4">
+      <div className="relative w-24 h-24 mb-4">
         <img
           src={vinylRecord}
           alt="Vinyl Record"
@@ -113,9 +113,9 @@ export const VinylPlayer = () => {
         {/* Play/Pause Button */}
         <Button
           onClick={togglePlay}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-12 h-12 p-0 bg-accent hover:bg-accent/90 shadow-lg"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-7 h-7 p-0 bg-accent hover:bg-accent/90 shadow-lg"
         >
-          {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
+          {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
         </Button>
       </div>
 
