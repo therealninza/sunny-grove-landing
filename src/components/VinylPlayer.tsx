@@ -3,6 +3,7 @@ import { Pause, Play, SkipForward, List } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import vinylRecord from '@/assets/vinyl-record.jpg';
 
 interface Track {
   title: string;
@@ -99,36 +100,34 @@ export const VinylPlayer = () => {
   };
 
   return (
-    <div className="relative w-full max-w-[120px] mx-auto my-2">
+    <div className="relative w-full max-w-[200px] mx-auto my-2 flex flex-col items-center">
       {/* Vinyl Record Animation */}
-      <div className={`relative w-14 h-14 mx-auto mb-1 ${isPlaying ? 'animate-spin' : ''}`} 
-           style={{ animationDuration: '4s', transformOrigin: 'center' }}>
-        <div className="absolute inset-0 rounded-full bg-black shadow-lg">
-          <div className="absolute inset-1 rounded-full bg-gradient-to-br from-gray-800 to-gray-900">
-            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-gray-700 to-gray-800">
-              <div className="absolute inset-3 rounded-full bg-gradient-to-br from-gray-600 to-gray-700" />
-            </div>
-          </div>
-        </div>
+      <div className="relative w-40 h-40 mb-4">
+        <img
+          src={vinylRecord}
+          alt="Vinyl Record"
+          className={`w-full h-full rounded-full object-cover shadow-lg ${isPlaying ? 'animate-spin' : ''}`}
+          style={{ animationDuration: '4s', transformOrigin: 'center' }}
+        />
+        
+        {/* Play/Pause Button */}
+        <Button
+          onClick={togglePlay}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-12 h-12 p-0 bg-accent hover:bg-accent/90 shadow-lg"
+        >
+          {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
+        </Button>
       </div>
 
-      {/* Play/Pause Button */}
-      <Button
-        onClick={togglePlay}
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-6 h-6 p-0 bg-accent hover:bg-accent/90"
-      >
-        {isPlaying ? <Pause className="h-3 w-3" /> : <Play className="h-3 w-3" />}
-      </Button>
-
       {/* Controls */}
-      <div className="flex items-center justify-center gap-1 mt-2">
+      <div className="flex items-center justify-center gap-2">
         <Button
           onClick={skipToNext}
           size="icon"
           variant="ghost"
-          className="h-6 w-6 rounded-full text-accent hover:text-accent hover:bg-accent/10"
+          className="h-8 w-8 rounded-full text-accent hover:text-accent hover:bg-accent/10"
         >
-          <SkipForward className="h-3 w-3" />
+          <SkipForward className="h-4 w-4" />
         </Button>
         
         <Popover>
@@ -136,9 +135,9 @@ export const VinylPlayer = () => {
             <Button
               size="icon"
               variant="ghost"
-              className="h-6 w-6 rounded-full text-accent hover:text-accent hover:bg-accent/10"
+              className="h-8 w-8 rounded-full text-accent hover:text-accent hover:bg-accent/10"
             >
-              <List className="h-3 w-3" />
+              <List className="h-4 w-4" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-80">
