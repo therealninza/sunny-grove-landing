@@ -27,9 +27,18 @@ export const VinylPlayer = () => {
         const widget = (window as any).SC.Widget(iframeRef.current);
         widgetRef.current = widget;
         
-        // Get all tracks from playlist
-        widget.getSounds((sounds: Track[]) => {
-          setTracks(sounds);
+        // Wait for widget to be ready
+        widget.bind((window as any).SC.Widget.Events.READY, () => {
+          // Get all tracks from playlist
+          widget.getSounds((sounds: Track[]) => {
+            console.log('Loaded tracks:', sounds);
+            setTracks(sounds);
+          });
+          
+          // Get current track
+          widget.getCurrentSound((sound: Track) => {
+            setCurrentTrack(sound);
+          });
         });
         
         // Listen for track changes
@@ -117,7 +126,7 @@ export const VinylPlayer = () => {
           onClick={skipToNext}
           size="icon"
           variant="ghost"
-          className="h-6 w-6 rounded-full"
+          className="h-6 w-6 rounded-full text-accent hover:text-accent hover:bg-accent/10"
         >
           <SkipForward className="h-3 w-3" />
         </Button>
@@ -127,7 +136,7 @@ export const VinylPlayer = () => {
             <Button
               size="icon"
               variant="ghost"
-              className="h-6 w-6 rounded-full"
+              className="h-6 w-6 rounded-full text-accent hover:text-accent hover:bg-accent/10"
             >
               <List className="h-3 w-3" />
             </Button>
