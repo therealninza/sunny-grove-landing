@@ -138,6 +138,17 @@ const Overview = () => {
                       <span className="text-xs">↗</span>
                     </a>
                   </li>
+                  <li>
+                    <a 
+                      href="https://www.makotoshibuya.com/zero" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                    >
+                      Zero: A Case Study on Bitcoin & Net-Zero Carbon Projects
+                      <span className="text-xs">↗</span>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
