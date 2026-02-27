@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart, Map, Copy } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart, Map, Copy, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
@@ -81,6 +81,15 @@ export const Hero = () => {
               className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
             >
               🥫 Can Wall
+            </Button>
+          </Link>
+          <Link to="/building-spec">
+            <Button 
+              size="sm" 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
+            >
+              <Building2 className="h-4 w-4 mr-1" />
+              Spec
             </Button>
           </Link>
           <VinylPlayer />
