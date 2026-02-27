@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Overview from "./pages/Overview";
 import PropertyLayout from "./pages/PropertyLayout";
+import CanWall from "./pages/CanWall";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/property-layout" element={<PropertyLayout />} />
+          <Route path="/can-wall" element={<CanWall />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

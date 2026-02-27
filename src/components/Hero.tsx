@@ -75,6 +75,14 @@ export const Hero = () => {
               Property
             </Button>
           </Link>
+          <Link to="/can-wall">
+            <Button 
+              size="sm" 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
+            >
+              🥫 Can Wall
+            </Button>
+          </Link>
           <VinylPlayer />
         </div>
       </div>
