@@ -126,6 +126,20 @@ const Overview = () => {
                     MPC framework demonstrates up to 15% energy reduction and $1.5M annual profit potential for commercial-scale bitcoin-heated greenhouses.
                   </p>
                 </div>
+                <div className="pt-2">
+                  <a 
+                    href="/documents/energy-modeling-crypto-greenhouse.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Energy Modeling and Techno-Economic Feasibility Analysis of Greenhouses for Tomato Cultivation Utilizing the Waste Heat of Cryptocurrency Miners" — Asgari, McDonald & Pearce, Western University (Energies, 2023)
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Quasi-steady state thermal model across 6 North American locations shows cryptocurrency waste heat can profitably offset natural gas greenhouse heating.
+                  </p>
+                </div>
               </div>
               <div className="pt-4 border-t border-border">
                 <p className="mb-3 font-semibold">Learn more about our project:</p>
