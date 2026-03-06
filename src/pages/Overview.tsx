@@ -99,7 +99,7 @@ const Overview = () => {
           <section>
             <h2 className="text-2xl font-bold mb-4">Research & Innovation</h2>
             <div className="bg-muted p-6 rounded-lg space-y-4">
-              <div>
+              <div className="space-y-4">
                 <p className="mb-4">
                   Our approach is informed by cutting-edge research in sustainable food production. Data centers generate significant heat that can be repurposed for greenhouse heating, especially valuable in sub-arctic regions.
                 </p>
@@ -112,6 +112,20 @@ const Overview = () => {
                   Read: "Data center heated greenhouses, a matter for enhanced food self-sufficiency in sub-arctic regions"
                   <span className="text-xs">↗</span>
                 </a>
+                <div className="pt-2">
+                  <a 
+                    href="/documents/energy-optimization-bitcoin-greenhouse.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Energy optimization of bitcoin mining integrated greenhouse with model predictive control" — Chen & You, Cornell University (Applied Energy, 2025)
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    MPC framework demonstrates up to 15% energy reduction and $1.5M annual profit potential for commercial-scale bitcoin-heated greenhouses.
+                  </p>
+                </div>
               </div>
               <div className="pt-4 border-t border-border">
                 <p className="mb-3 font-semibold">Learn more about our project:</p>
