@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bitcoin, Hash, Loader2 } from "lucide-react";
+import { ArrowLeft, Bitcoin, Hash, Loader2, TrendingUp, TrendingDown } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -25,6 +25,7 @@ const CanWall = () => {
   const [addressData, setAddressData] = useState<AddressData | null>(null);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [btcCadPrice, setBtcCadPrice] = useState<number | null>(null);
+  const [historicalPrices, setHistoricalPrices] = useState<Record<number, number>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,12 +38,47 @@ const CanWall = () => {
         ]);
 
         const addrData = await addrRes.json();
-        const txData = await txRes.json();
+        const txData: Transaction[] = await txRes.json();
         const priceData = await priceRes.json();
 
         setAddressData(addrData);
         setTransactions(txData);
         setBtcCadPrice(priceData.CAD);
+
+        // Fetch historical BTC/CAD prices for cost basis calculation
+        const confirmedTxs = txData.filter((tx: Transaction) => tx.status.block_time);
+        if (confirmedTxs.length > 0) {
+          const timestamps = confirmedTxs.map((tx: Transaction) => tx.status.block_time!);
+          const minTime = Math.min(...timestamps);
+          const maxTime = Math.max(...timestamps);
+
+          try {
+            const histRes = await fetch(
+              `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=cad&from=${minTime}&to=${maxTime + 86400}`
+            );
+            const histData = await histRes.json();
+
+            if (histData.prices) {
+              const priceMap: Record<number, number> = {};
+              for (const tx of confirmedTxs) {
+                const txTime = tx.status.block_time! * 1000;
+                let closest = histData.prices[0];
+                let minDiff = Math.abs(histData.prices[0][0] - txTime);
+                for (const p of histData.prices) {
+                  const diff = Math.abs(p[0] - txTime);
+                  if (diff < minDiff) {
+                    minDiff = diff;
+                    closest = p;
+                  }
+                }
+                priceMap[tx.status.block_time!] = closest[1];
+              }
+              setHistoricalPrices(priceMap);
+            }
+          } catch (e) {
+            console.error("Failed to fetch historical prices:", e);
+          }
+        }
       } catch (err) {
         console.error("Failed to fetch data:", err);
       } finally {
@@ -62,6 +98,22 @@ const CanWall = () => {
       .filter((v) => v.scriptpubkey_address === BTC_ADDRESS)
       .reduce((sum, v) => sum + v.value, 0);
   };
+
+  const getCostBasis = (tx: Transaction) => {
+    if (!tx.status.block_time || !historicalPrices[tx.status.block_time]) return null;
+    const sats = getReceivedAmount(tx);
+    return (sats / 1e8) * historicalPrices[tx.status.block_time];
+  };
+
+  const totalCostBasis = transactions.reduce((sum, tx) => {
+    const cost = getCostBasis(tx);
+    return sum + (cost ?? 0);
+  }, 0);
+
+  const totalCurrentValue = btcCadPrice ? totalBtc * btcCadPrice : 0;
+  const totalGainLoss = totalCurrentValue - totalCostBasis;
+  const totalGainLossPercent = totalCostBasis > 0 ? (totalGainLoss / totalCostBasis) * 100 : 0;
+  const hasCostData = Object.keys(historicalPrices).length > 0;
 
   const satsToCans = (sats: number) => {
     if (!btcCadPrice) return 0;
@@ -112,6 +164,43 @@ const CanWall = () => {
             Every donation to the greenhouse treasury is commemorated here. Each transaction is converted to its equivalent in cans — because every little bit counts. 🌱
           </p>
         </div>
+
+        {/* Treasury Performance */}
+        {hasCostData && btcCadPrice && (
+          <Card className="border-emerald-800/50 mb-8 max-w-4xl mx-auto" style={{ background: "hsl(150, 25%, 15%)" }}>
+            <CardContent className="p-6">
+              <div className="flex items-center gap-2 mb-4">
+                {totalGainLoss >= 0 ? (
+                  <TrendingUp className="h-5 w-5 text-green-400" />
+                ) : (
+                  <TrendingDown className="h-5 w-5 text-red-400" />
+                )}
+                <h3 className="text-lg font-bold text-emerald-100">Treasury Performance</h3>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div>
+                  <p className="text-xs text-emerald-400 mb-1">Cost Basis</p>
+                  <p className="text-2xl font-bold text-emerald-100">${totalCostBasis.toFixed(2)}</p>
+                  <p className="text-xs text-emerald-300/50">CAD at time of donation</p>
+                </div>
+                <div>
+                  <p className="text-xs text-emerald-400 mb-1">Current Value</p>
+                  <p className="text-2xl font-bold text-emerald-100">${totalCurrentValue.toFixed(2)}</p>
+                  <p className="text-xs text-emerald-300/50">CAD at current price</p>
+                </div>
+                <div>
+                  <p className="text-xs text-emerald-400 mb-1">Unrealized Gain/Loss</p>
+                  <p className={`text-2xl font-bold ${totalGainLoss >= 0 ? "text-green-400" : "text-red-400"}`}>
+                    {totalGainLoss >= 0 ? "+" : ""}${totalGainLoss.toFixed(2)}
+                  </p>
+                  <p className={`text-xs ${totalGainLoss >= 0 ? "text-green-400/60" : "text-red-400/60"}`}>
+                    {totalGainLossPercent >= 0 ? "+" : ""}{totalGainLossPercent.toFixed(1)}%
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
@@ -173,6 +262,9 @@ const CanWall = () => {
             const receivedSats = getReceivedAmount(tx);
             const cans = satsToCans(receivedSats);
             const btcAmount = receivedSats / 1e8;
+            const costBasis = getCostBasis(tx);
+            const currentVal = btcCadPrice ? btcAmount * btcCadPrice : 0;
+            const gl = costBasis ? currentVal - costBasis : null;
 
             return (
               <Card
@@ -193,6 +285,16 @@ const CanWall = () => {
                   <p className="text-sm text-emerald-300/60">
                     {btcAmount.toFixed(8)} BTC ({receivedSats.toLocaleString()} sats)
                   </p>
+                  {costBasis !== null && gl !== null && (
+                    <div className="mt-2 pt-2 border-t border-emerald-800/30">
+                      <div className="flex justify-between text-xs">
+                        <span className="text-emerald-300/50">Cost: ${costBasis.toFixed(2)}</span>
+                        <span className={gl >= 0 ? "text-green-400" : "text-red-400"}>
+                          {gl >= 0 ? "+" : ""}${gl.toFixed(2)} ({((gl / costBasis) * 100).toFixed(1)}%)
+                        </span>
+                      </div>
+                    </div>
+                  )}
                   <a
                     href={`https://mempool.space/tx/${tx.txid}`}
                     target="_blank"
