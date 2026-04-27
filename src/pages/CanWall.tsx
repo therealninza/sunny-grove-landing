@@ -115,11 +115,20 @@ const CanWall = () => {
   const totalGainLossPercent = totalCostBasis > 0 ? (totalGainLoss / totalCostBasis) * 100 : 0;
   const hasCostData = Object.keys(historicalPrices).length > 0;
 
-  const satsToCans = (sats: number) => {
-    if (!btcCadPrice) return 0;
-    const cadValue = (sats / 1e8) * btcCadPrice;
+  const satsToCans = (sats: number, priceCad?: number | null) => {
+    const price = priceCad ?? btcCadPrice;
+    if (!price) return 0;
+    const cadValue = (sats / 1e8) * price;
     return Math.floor(cadValue / CAN_PRICE_CAD);
   };
+
+  // Total cans is the sum of each donation's cans locked at its historical price.
+  // Falls back to current price only for transactions missing historical data.
+  const totalCans = transactions.reduce((sum, tx) => {
+    const sats = getReceivedAmount(tx);
+    const histPrice = tx.status.block_time ? historicalPrices[tx.status.block_time] : undefined;
+    return sum + satsToCans(sats, histPrice);
+  }, 0);
 
   const formatDate = (timestamp?: number) => {
     if (!timestamp) return "Unconfirmed";
@@ -246,9 +255,9 @@ const CanWall = () => {
             </CardHeader>
             <CardContent>
               <p className="text-3xl font-bold text-emerald-100">
-                {satsToCans(addressData?.chain_stats.funded_txo_sum ?? 0).toLocaleString()}
+                {totalCans.toLocaleString()}
               </p>
-              <p className="text-sm text-emerald-300/60 mt-1">cans equivalent @ $0.10 CAD each</p>
+              <p className="text-sm text-emerald-300/60 mt-1">cans locked at donation-time price ($0.10 CAD each)</p>
             </CardContent>
           </Card>
         </div>
@@ -260,7 +269,8 @@ const CanWall = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {transactions.map((tx) => {
             const receivedSats = getReceivedAmount(tx);
-            const cans = satsToCans(receivedSats);
+            const histPrice = tx.status.block_time ? historicalPrices[tx.status.block_time] : undefined;
+            const cans = satsToCans(receivedSats, histPrice);
             const btcAmount = receivedSats / 1e8;
             const costBasis = getCostBasis(tx);
             const currentVal = btcCadPrice ? btcAmount * btcCadPrice : 0;
