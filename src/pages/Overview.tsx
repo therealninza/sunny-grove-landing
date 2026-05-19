@@ -145,9 +145,9 @@ const Overview = () => {
                 <p className="mb-3 font-semibold">Learn more about our project:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>
-                    <a 
-                      href="https://bitcoin-greenhouse.gitbook.io/bitcoin-greenhouse-docs/" 
-                      target="_blank" 
+                    <a
+                      href="https://bitcoin-greenhouse.gitbook.io/bitcoin-greenhouse-docs/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
                     >
@@ -156,9 +156,9 @@ const Overview = () => {
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://keirnan.substack.com/p/hlkyakii-to-start-a-fire" 
-                      target="_blank" 
+                    <a
+                      href="https://keirnan.substack.com/p/hlkyakii-to-start-a-fire"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
                     >
@@ -167,13 +167,24 @@ const Overview = () => {
                     </a>
                   </li>
                   <li>
-                    <a 
-                      href="https://www.makotoshibuya.com/zero" 
-                      target="_blank" 
+                    <a
+                      href="https://www.makotoshibuya.com/zero"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
                     >
                       Zero: A Case Study on Bitcoin & Net-Zero Carbon Projects
+                      <span className="text-xs">↗</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://facts.bitcoinbeyond66.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                    >
+                      Bitcoin Beyond — Facts & Research
                       <span className="text-xs">↗</span>
                     </a>
                   </li>
