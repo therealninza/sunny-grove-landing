@@ -111,6 +111,10 @@ export const Hero = () => {
               <span className="text-white">Solar Powered</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <Sprout className="h-5 w-5 text-green-400" />
+              <span className="text-white">Agrivoltaics</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
               <Cpu className="h-5 w-5 text-blue-400" />
               <span className="text-white">ASIC Mining</span>
             </div>
