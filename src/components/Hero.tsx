@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart, Map, Copy, Building2 } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Sprout, Twitter, Github, Heart, Map, Copy, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
