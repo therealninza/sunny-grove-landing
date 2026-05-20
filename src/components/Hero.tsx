@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bitcoin, Cpu, Sun, Twitter, Github, Heart, Map, Copy, Building2 } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Sprout, Twitter, Github, Heart, Map, Copy, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
@@ -109,6 +109,10 @@ export const Hero = () => {
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
               <Sun className="h-5 w-5 text-yellow-400" />
               <span className="text-white">Solar Powered</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <Sprout className="h-5 w-5 text-green-400" />
+              <span className="text-white">Agrivoltaics</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
               <Cpu className="h-5 w-5 text-blue-400" />
