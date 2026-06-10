@@ -64,12 +64,12 @@ export const Hero = () => {
             🐸 Frog Chilling Place
           </div>
 
-          <div className="flex items-center gap-2 ml-auto">
+          <div className="flex items-center gap-2 ml-auto bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl px-3 py-2 shadow-lg shadow-black/20">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   size="sm"
-                  className="group bg-gradient-to-r from-emerald-500/20 to-orange-500/20 hover:from-emerald-500/30 hover:to-orange-500/30 text-white border border-white/20 backdrop-blur-md h-9 px-4 rounded-full shadow-lg shadow-black/20"
+                  className="group bg-gradient-to-r from-emerald-500/20 to-orange-500/20 hover:from-emerald-500/30 hover:to-orange-500/30 text-white border border-white/20 backdrop-blur-md h-9 px-4 rounded-full"
                 >
                   <Compass className="h-4 w-4 mr-2 transition-transform group-hover:rotate-45" />
                   Explore the greenhouse
@@ -122,7 +122,10 @@ export const Hero = () => {
                 </Link>
               </DropdownMenuContent>
             </DropdownMenu>
-            <VinylPlayer />
+            <div className="w-px h-8 bg-white/20" />
+            <div className="w-[60px] flex items-center justify-center">
+              <VinylPlayer />
+            </div>
           </div>
         </div>
       </div>
