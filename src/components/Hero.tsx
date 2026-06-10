@@ -47,60 +47,53 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
-      {/* Header with all elements aligned */}
-      <div className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between">
-        {/* Tickers on the left */}
-        <div className="flex flex-row items-center gap-2">
-          <BitcoinTicker />
-          <BlockHeightTicker />
-          <SolarTicker />
+      {/* Header: thin ticker strip on top, nav row below */}
+      <div className="absolute top-0 left-0 right-0 z-20">
+        {/* Thin top strip: tickers */}
+        <div className="w-full bg-black/40 backdrop-blur-sm border-b border-white/10">
+          <div className="container mx-auto px-4 py-1.5 flex items-center justify-center sm:justify-start gap-2 overflow-x-auto">
+            <BitcoinTicker />
+            <BlockHeightTicker />
+            <SolarTicker />
+          </div>
         </div>
 
-        {/* Right side elements */}
-        <div className="flex items-center gap-2">
-          <a 
-            href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf" 
-            target="_blank" 
+        {/* Nav row */}
+        <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+          <a
+            href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf"
+            target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-white/80 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full border border-white/20 transition-all flex items-center"
+            className="text-xs text-white/80 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full border border-white/20 transition-all flex items-center max-w-[60vw] sm:max-w-none truncate"
           >
             🎙️ Podcast: Totem poles, proof of work and bitcoin
           </a>
-          <Link to="/property-layout">
-            <Button 
-              size="sm" 
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
-            >
-              <Map className="h-4 w-4 mr-1" />
-              Property
-            </Button>
-          </Link>
-          <Link to="/can-wall">
-            <Button 
-              size="sm" 
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
-            >
-              🥫 Can Wall
-            </Button>
-          </Link>
-          <Link to="/building-spec">
-            <Button 
-              size="sm" 
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
-            >
-              <Building2 className="h-4 w-4 mr-1" />
-              Spec
-            </Button>
-          </Link>
-          <Link to="/economics">
-            <Button 
-              size="sm" 
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
-            >
-              Mining economics
-            </Button>
-          </Link>
-          <VinylPlayer />
+
+          <div className="flex items-center gap-2 flex-wrap justify-end">
+            <Link to="/property-layout">
+              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
+                <Map className="h-4 w-4 mr-1" />
+                Property
+              </Button>
+            </Link>
+            <Link to="/can-wall">
+              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
+                🥫 Can Wall
+              </Button>
+            </Link>
+            <Link to="/building-spec">
+              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
+                <Building2 className="h-4 w-4 mr-1" />
+                Spec
+              </Button>
+            </Link>
+            <Link to="/economics">
+              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
+                Mining economics
+              </Button>
+            </Link>
+            <VinylPlayer />
+          </div>
         </div>
       </div>
       
