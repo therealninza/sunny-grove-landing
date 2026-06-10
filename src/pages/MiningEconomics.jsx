@@ -41,7 +41,7 @@ function num(v, fallback) {
   return Number.isFinite(n) ? n : fallback;
 }
 
-export default function App() {
+export default function MiningEconomics() {
   const [hashprice, setHashprice] = useState(HASHPRICE_LIVE);
   const [eff, setEff] = useState(16);
   const [powerCost, setPowerCost] = useState(40); // $/MWh delivered
