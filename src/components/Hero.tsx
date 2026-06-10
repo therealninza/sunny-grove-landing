@@ -120,10 +120,6 @@ export const Hero = () => {
 
         {/* Nav row */}
         <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-2">
-          <div className="text-white/80 text-sm font-medium tracking-wide hidden sm:block">
-            🐸 Frog Chilling Place
-          </div>
-
           <div className="flex items-center gap-2 ml-auto">
             <VinylPlayer />
           </div>
@@ -133,7 +129,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-2xl animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Frog Chilling Place - A bitcoin powered community greenhouse
+            The Bitcoin Greenhouse — A bitcoin powered community greenhouse
           </h1>
           <p className="text-xl text-white/90 mb-8">
             A greenhouse combining solar energy and ASIC mining to provide year-round food production. 
