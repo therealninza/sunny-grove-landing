@@ -1,5 +1,5 @@
 
-import { ArrowRight, Bitcoin, Cpu, Sun, Sprout, Twitter, Github, Heart, Map, Copy, Building2 } from "lucide-react";
+import { ArrowRight, Bitcoin, Cpu, Sun, Sprout, Twitter, Github, Heart, Map, Copy, Building2, Compass, Mic, Archive, Calculator, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { VinylPlayer } from "@/components/VinylPlayer";
 import { BitcoinTicker } from "@/components/BitcoinTicker";
@@ -59,39 +59,69 @@ export const Hero = () => {
         </div>
 
         {/* Nav row */}
-        <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
-          <a
-            href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-white/80 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full border border-white/20 transition-all flex items-center max-w-[60vw] sm:max-w-none truncate"
-          >
-            🎙️ Podcast: Totem poles, proof of work and bitcoin
-          </a>
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-2">
+          <div className="text-white/80 text-sm font-medium tracking-wide hidden sm:block">
+            🐸 Frog Chilling Place
+          </div>
 
-          <div className="flex items-center gap-2 flex-wrap justify-end">
-            <Link to="/property-layout">
-              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
-                <Map className="h-4 w-4 mr-1" />
-                Property
-              </Button>
-            </Link>
-            <Link to="/can-wall">
-              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
-                🥫 Can Wall
-              </Button>
-            </Link>
-            <Link to="/building-spec">
-              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
-                <Building2 className="h-4 w-4 mr-1" />
-                Spec
-              </Button>
-            </Link>
-            <Link to="/economics">
-              <Button size="sm" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8">
-                Mining economics
-              </Button>
-            </Link>
+          <div className="flex items-center gap-2 ml-auto">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  size="sm"
+                  className="group bg-gradient-to-r from-emerald-500/20 to-orange-500/20 hover:from-emerald-500/30 hover:to-orange-500/30 text-white border border-white/20 backdrop-blur-md h-9 px-4 rounded-full shadow-lg shadow-black/20"
+                >
+                  <Compass className="h-4 w-4 mr-2 transition-transform group-hover:rotate-45" />
+                  Explore the greenhouse
+                  <ChevronDown className="h-4 w-4 ml-2 opacity-70 transition-transform group-data-[state=open]:rotate-180" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="end"
+                className="w-72 bg-black/80 backdrop-blur-xl border border-white/10 text-white p-2"
+              >
+                <a
+                  href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors"
+                >
+                  <Mic className="h-4 w-4 mt-0.5 text-orange-400 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Podcast</span>
+                    <span className="text-xs text-white/60">Totem poles, proof of work & bitcoin</span>
+                  </div>
+                </a>
+                <Link to="/property-layout" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                  <Map className="h-4 w-4 mt-0.5 text-emerald-400 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Property layout</span>
+                    <span className="text-xs text-white/60">Walk the land: greenhouse, orchard, mill</span>
+                  </div>
+                </Link>
+                <Link to="/can-wall" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                  <Archive className="h-4 w-4 mt-0.5 text-yellow-400 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Can wall 🥫</span>
+                    <span className="text-xs text-white/60">Sats stacked, visualized as cans</span>
+                  </div>
+                </Link>
+                <Link to="/building-spec" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                  <Building2 className="h-4 w-4 mt-0.5 text-blue-400 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Building spec</span>
+                    <span className="text-xs text-white/60">Structure, systems & BOM</span>
+                  </div>
+                </Link>
+                <Link to="/economics" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                  <Calculator className="h-4 w-4 mt-0.5 text-pink-400 shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium">Mining economics</span>
+                    <span className="text-xs text-white/60">Heat-to-revenue calculator</span>
+                  </div>
+                </Link>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <VinylPlayer />
           </div>
         </div>
