@@ -89,6 +89,33 @@ export const SolarTicker = () => {
             >
               <span className="font-medium">Small home miner?</span> Join our Zappool →
             </a>
+            <div className="space-y-1">
+              <span className="text-xs font-medium">Zap us on Nostr:</span>
+              <div className="flex items-center gap-2 bg-muted p-2 rounded">
+                <code className="text-[10px] break-all flex-1 leading-tight">
+                  {NOSTR_NPUB}
+                </code>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="h-6 w-6 p-0 shrink-0"
+                  onClick={() => {
+                    navigator.clipboard.writeText(NOSTR_NPUB);
+                    toast({ title: "Copied!", description: "npub copied to clipboard" });
+                  }}
+                >
+                  <Copy className="h-3 w-3" />
+                </Button>
+              </div>
+              <a
+                href="https://njump.me/npub1m32waq4klf2m065xet5kpd4zph7z8g46wlza2f7q4dhmrzvul8qsjwefzq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] text-blue-400 hover:underline"
+              >
+                View on njump.me →
+              </a>
+            </div>
           </div>
         </PopoverContent>
       </Popover>
