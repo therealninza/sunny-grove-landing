@@ -92,6 +92,14 @@ export const Hero = () => {
               Spec
             </Button>
           </Link>
+          <Link to="/economics">
+            <Button 
+              size="sm" 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/20 h-8"
+            >
+              Mining economics
+            </Button>
+          </Link>
           <VinylPlayer />
         </div>
       </div>
