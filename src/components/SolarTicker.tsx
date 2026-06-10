@@ -1,4 +1,4 @@
-import { Sun, Zap, Wallet } from "lucide-react";
+import { Sun, Zap, Wallet, Copy } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
