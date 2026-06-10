@@ -9,6 +9,7 @@ import Overview from "./pages/Overview";
 import PropertyLayout from "./pages/PropertyLayout";
 import CanWall from "./pages/CanWall";
 import BuildingSpec from "./pages/BuildingSpec";
+import MiningEconomics from "./pages/MiningEconomics";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/property-layout" element={<PropertyLayout />} />
           <Route path="/can-wall" element={<CanWall />} />
           <Route path="/building-spec" element={<BuildingSpec />} />
+          <Route path="/economics" element={<MiningEconomics />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
