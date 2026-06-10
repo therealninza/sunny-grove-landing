@@ -140,6 +140,76 @@ const Overview = () => {
                     Quasi-steady state thermal model across 6 North American locations shows cryptocurrency waste heat can profitably offset natural gas greenhouse heating.
                   </p>
                 </div>
+                <div className="pt-2">
+                  <a
+                    href="https://www.sciencedirect.com/science/article/abs/pii/S0378779625007874"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Leveraging bitcoin mining machines in demand-response mechanisms to mitigate ramping-induced transients" (Electric Power Systems Research)
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Demonstrates how flexible Bitcoin miners can act as fast demand-response loads, smoothing grid ramping events and supporting renewable integration.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <a
+                    href="/documents/energy-economic-environmental-crypto-mining.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Energy, economic and environmental impacts of cryptocurrency mining: a review of sustainable integration pathways in power systems"
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Comprehensive review of how Bitcoin mining can be sustainably integrated into power systems alongside renewable generation.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <a
+                    href="https://www.sciencedirect.com/science/article/abs/pii/S0038092X25007820"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Techno-economic assessments of a cogeneration system of large-scale solar photovoltaic energy and Bitcoin cryptocurrency mining" (Solar Energy)
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Shows how pairing large-scale solar PV with Bitcoin mining improves project economics and utilization of clean energy.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <a
+                    href="/documents/maximizing-roi-crypto-mining.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Maximizing Return on Investment in Cryptocurrency Mining Through Energy Optimization"
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Energy optimization strategies that increase profitability and efficiency of cryptocurrency mining operations.
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <a
+                    href="/documents/hybrid-hydropower-pv-mining.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Hybrid Hydropower–PV with Mining Flexibility and Heat Recovery: Article 6-Ready Mitigation Pathways in Central Asia"
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Explores hybrid hydro+solar systems with flexible Bitcoin mining and waste-heat recovery as Paris Agreement Article 6 mitigation pathways.
+                  </p>
+                </div>
               </div>
               <div className="pt-4 border-t border-border">
                 <p className="mb-3 font-semibold">Learn more about our project:</p>
