@@ -61,9 +61,9 @@ export const SolarTicker = () => {
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-64 p-3">
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h4 className="font-medium text-sm">Mining Information</h4>
-            <div className="text-xs space-y-1">
+            <div className="text-xs space-y-2">
               <div>
                 <span className="font-medium">Stratum:</span><br />
                 <code className="text-xs bg-muted px-1 py-0.5 rounded">
@@ -77,6 +77,14 @@ export const SolarTicker = () => {
                 </code>
               </div>
             </div>
+            <a
+              href="https://zappool.org/quick.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-xs text-blue-400 hover:underline bg-blue-500/10 p-2 rounded"
+            >
+              <span className="font-medium">Small home miner?</span> Join our Zappool →
+            </a>
           </div>
         </PopoverContent>
       </Popover>
