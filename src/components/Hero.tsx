@@ -55,6 +55,66 @@ export const Hero = () => {
             <BitcoinTicker />
             <BlockHeightTicker />
             <SolarTicker />
+            <div className="ml-auto flex items-center gap-2 shrink-0">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    size="sm"
+                    className="group bg-gradient-to-r from-emerald-500/20 to-orange-500/20 hover:from-emerald-500/30 hover:to-orange-500/30 text-white border border-white/20 backdrop-blur-md h-7 px-3 rounded-full text-xs shadow-lg shadow-black/20"
+                  >
+                    <Compass className="h-3.5 w-3.5 mr-1.5 transition-transform group-hover:rotate-45" />
+                    <span className="hidden sm:inline">Explore the greenhouse</span>
+                    <span className="sm:hidden">Explore</span>
+                    <ChevronDown className="h-3.5 w-3.5 ml-1.5 opacity-70 transition-transform group-data-[state=open]:rotate-180" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="end"
+                  className="w-72 bg-black/80 backdrop-blur-xl border border-white/10 text-white p-2"
+                >
+                  <a
+                    href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors"
+                  >
+                    <Mic className="h-4 w-4 mt-0.5 text-orange-400 shrink-0" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Podcast</span>
+                      <span className="text-xs text-white/60">Totem poles, proof of work & bitcoin</span>
+                    </div>
+                  </a>
+                  <Link to="/property-layout" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                    <Map className="h-4 w-4 mt-0.5 text-emerald-400 shrink-0" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Property layout</span>
+                      <span className="text-xs text-white/60">Walk the land: greenhouse, orchard, mill</span>
+                    </div>
+                  </Link>
+                  <Link to="/can-wall" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                    <Archive className="h-4 w-4 mt-0.5 text-yellow-400 shrink-0" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Can wall 🥫</span>
+                      <span className="text-xs text-white/60">Sats stacked, visualized as cans</span>
+                    </div>
+                  </Link>
+                  <Link to="/building-spec" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                    <Building2 className="h-4 w-4 mt-0.5 text-blue-400 shrink-0" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Building spec</span>
+                      <span className="text-xs text-white/60">Structure, systems & BOM</span>
+                    </div>
+                  </Link>
+                  <Link to="/economics" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
+                    <Calculator className="h-4 w-4 mt-0.5 text-pink-400 shrink-0" />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium">Mining economics</span>
+                      <span className="text-xs text-white/60">Heat-to-revenue calculator</span>
+                    </div>
+                  </Link>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
         </div>
 
@@ -65,63 +125,6 @@ export const Hero = () => {
           </div>
 
           <div className="flex items-center gap-2 ml-auto">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  size="sm"
-                  className="group bg-gradient-to-r from-emerald-500/20 to-orange-500/20 hover:from-emerald-500/30 hover:to-orange-500/30 text-white border border-white/20 backdrop-blur-md h-9 px-4 rounded-full shadow-lg shadow-black/20"
-                >
-                  <Compass className="h-4 w-4 mr-2 transition-transform group-hover:rotate-45" />
-                  Explore the greenhouse
-                  <ChevronDown className="h-4 w-4 ml-2 opacity-70 transition-transform group-data-[state=open]:rotate-180" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="end"
-                className="w-72 bg-black/80 backdrop-blur-xl border border-white/10 text-white p-2"
-              >
-                <a
-                  href="https://fountain.fm/episode/u8MQlUOrfZriD8mDuVNf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors"
-                >
-                  <Mic className="h-4 w-4 mt-0.5 text-orange-400 shrink-0" />
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Podcast</span>
-                    <span className="text-xs text-white/60">Totem poles, proof of work & bitcoin</span>
-                  </div>
-                </a>
-                <Link to="/property-layout" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
-                  <Map className="h-4 w-4 mt-0.5 text-emerald-400 shrink-0" />
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Property layout</span>
-                    <span className="text-xs text-white/60">Walk the land: greenhouse, orchard, mill</span>
-                  </div>
-                </Link>
-                <Link to="/can-wall" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
-                  <Archive className="h-4 w-4 mt-0.5 text-yellow-400 shrink-0" />
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Can wall 🥫</span>
-                    <span className="text-xs text-white/60">Sats stacked, visualized as cans</span>
-                  </div>
-                </Link>
-                <Link to="/building-spec" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
-                  <Building2 className="h-4 w-4 mt-0.5 text-blue-400 shrink-0" />
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Building spec</span>
-                    <span className="text-xs text-white/60">Structure, systems & BOM</span>
-                  </div>
-                </Link>
-                <Link to="/economics" className="flex items-start gap-3 p-2.5 rounded-md hover:bg-white/10 transition-colors">
-                  <Calculator className="h-4 w-4 mt-0.5 text-pink-400 shrink-0" />
-                  <div className="flex flex-col">
-                    <span className="text-sm font-medium">Mining economics</span>
-                    <span className="text-xs text-white/60">Heat-to-revenue calculator</span>
-                  </div>
-                </Link>
-              </DropdownMenuContent>
-            </DropdownMenu>
             <VinylPlayer />
           </div>
         </div>
