@@ -4,9 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { QRCodeSVG } from "qrcode.react";
 
+import { useToast } from "@/hooks/use-toast";
+
 const BITCOIN_ADDRESS = "bc1q7pza7k7xme4yzt84n87mr47r0ugpwdcukclh9y";
+const NOSTR_NPUB = "npub1m32waq4klf2m065xet5kpd4zph7z8g46wlza2f7q4dhmrzvul8qsjwefzq";
 
 export const SolarTicker = () => {
+  const { toast } = useToast();
   const [solarWatts, setSolarWatts] = useState<number | null>(null);
   const [btcBalance, setBtcBalance] = useState<number | null>(null);
 
