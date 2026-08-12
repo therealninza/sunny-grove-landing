@@ -210,6 +210,20 @@ const Overview = () => {
                     Explores hybrid hydro+solar systems with flexible Bitcoin mining and waste-heat recovery as Paris Agreement Article 6 mitigation pathways.
                   </p>
                 </div>
+                <div className="pt-2">
+                  <a
+                    href="/documents/bitcoin-mining-irish-wind-flexibility.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-2"
+                  >
+                    Read: "Bitcoin mining as supply-side flexibility in Irish wind energy integration"
+                    <span className="text-xs">↗</span>
+                  </a>
+                  <p className="text-sm text-foreground/60 mt-1">
+                    Examines how flexible Bitcoin mining loads can absorb curtailed wind generation and improve renewable integration on the Irish grid.
+                  </p>
+                </div>
               </div>
               <div className="pt-4 border-t border-border">
                 <p className="mb-3 font-semibold">Learn more about our project:</p>
