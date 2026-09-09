@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Twitter, Github } from "lucide-react";
+import { Twitter, Github, Bitcoin, ArrowRight } from "lucide-react";
 
 const socials = [
   {
@@ -10,7 +10,12 @@ const socials = [
   {
     label: "Nostr",
     href: "https://njump.me/npub1m32waq4klf2m065xet5kpd4zph7z8g46wlza2f7q4dhmrzvul8qsjwefzq",
-    Icon: Twitter, // nostr icon placeholder — reused to avoid extra dep
+    Icon: Bitcoin,
+  },
+  {
+    label: "Telegram",
+    href: "https://t.co/jmKnpjcBS2",
+    Icon: ArrowRight,
   },
   {
     label: "GitHub",
