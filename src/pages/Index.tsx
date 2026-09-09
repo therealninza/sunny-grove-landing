@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Stats } from "@/components/Stats";
 import { CTA } from "@/components/CTA";
-import { GardenPlanner } from "@/components/GardenPlanner";
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Index = () => {
@@ -38,7 +38,6 @@ const Index = () => {
         </div>
       </div>
       <Features />
-      <GardenPlanner />
       <Stats />
       <CTA />
     </main>
