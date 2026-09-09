@@ -27,6 +27,15 @@ const Index = () => {
             <div className="mt-3 flex items-center justify-center gap-4">
               <p className="text-sm text-foreground/70">3D model of our planned greenhouse structure</p>
               <a 
+                href="https://api2.enscape3d.com/v1/view/6af3e7ae-6baa-4747-b671-9119db07076e" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-accent hover:text-accent/80 underline transition-colors inline-flex items-center gap-1"
+              >
+                View Enscape 3D Preview
+                <span className="text-xs">↗</span>
+              </a>
+              <a 
                 href="/greenhouse_2.blend" 
                 download 
                 className="text-sm text-accent hover:text-accent/80 underline transition-colors"
