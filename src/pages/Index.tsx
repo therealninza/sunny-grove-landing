@@ -3,8 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Stats } from "@/components/Stats";
 import { CTA } from "@/components/CTA";
-
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { GreenhouseSlideshow } from "@/components/GreenhouseSlideshow";
 
 const Index = () => {
   return (
@@ -16,16 +15,9 @@ const Index = () => {
             "A garden returns 50x the investment you put into it. Not just food, but joy, peace and a real connection with creation. A spiritual retreat from a noisy world and hurried people. Grow a garden."
           </blockquote>
           
-          <div className="max-w-3xl mx-auto">
-            <AspectRatio ratio={16/9} className="bg-white/20 rounded-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/a69a6a90-6e01-4468-995d-ef0b14ebb3c3.png" 
-                alt="3D model of the greenhouse structure" 
-                className="w-full h-full object-cover"
-              />
-            </AspectRatio>
-            <div className="mt-3 flex items-center justify-center gap-4">
-              <p className="text-sm text-foreground/70">3D model of our planned greenhouse structure</p>
+          <div className="max-w-4xl mx-auto">
+            <GreenhouseSlideshow />
+            <div className="mt-3 flex items-center justify-center gap-4 flex-wrap">
               <a 
                 href="https://api2.enscape3d.com/v1/view/6af3e7ae-6baa-4747-b671-9119db07076e" 
                 target="_blank" 
