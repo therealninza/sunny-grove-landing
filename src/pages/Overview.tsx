@@ -101,7 +101,7 @@ const Overview = () => {
             <div className="bg-muted p-6 rounded-lg space-y-4">
               <div className="space-y-4">
                 <p className="mb-4">
-                  Our approach is informed by cutting-edge research in sustainable food production. Data centers generate significant heat that can be repurposed for greenhouse heating, especially valuable in sub-arctic regions.
+                  Our approach is informed by cutting-edge research in sustainable food production.
                 </p>
                 <a 
                   href="https://www.sciencedirect.com/science/article/pii/S0360544220322763" 
