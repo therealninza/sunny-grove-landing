@@ -13,12 +13,6 @@ const Coin = ({ small = false }: { small?: boolean }) => (
   </span>
 );
 
-const Cloud = ({ className }: { className: string }) => (
-  <span className={`game-cloud ${className}`} aria-hidden="true">
-    <span />
-    <span />
-  </span>
-);
 
 interface AddressData {
   chain_stats: {

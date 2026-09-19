@@ -116,6 +116,10 @@
     --game-positive: 125 71% 27%;
     --game-negative: 3 75% 40%;
     background-color: hsl(var(--game-sky));
+    background-image: url("/__l5e/assets-v1/e37dc21d-1fbc-49c1-8c4e-fee079d7086e/can-wall-sky.png");
+    background-repeat: repeat;
+    background-size: 740px auto;
+    image-rendering: pixelated;
     color: hsl(var(--game-ink));
   }
 
