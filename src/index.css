@@ -198,7 +198,7 @@
     .game-donation > .game-coin { animation-name: donation-coin-bob; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .game-coin { animation: none; }
+    .game-coin, .game-can { animation: none; }
     .game-block, .game-donation { transition: none; }
   }
 }
