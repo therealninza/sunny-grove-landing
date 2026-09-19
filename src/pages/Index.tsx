@@ -36,6 +36,7 @@ const Index = () => {
                 Download Blender File
               </a>
             </div>
+            <CommunityNode />
           </div>
         </div>
       </div>
