@@ -289,7 +289,7 @@ const CanWall = () => {
               >
                   <Coin />
                   <div className="flex items-start justify-between gap-3 mb-5 pt-1">
-                    <span className="game-pixel text-2xl text-game-brick-dark" aria-hidden="true">?</span>
+                    <Can />
                     <span className="game-pixel text-[8px] text-game-ink text-right leading-relaxed">
                       {formatDate(tx.status.block_time)}
                     </span>
