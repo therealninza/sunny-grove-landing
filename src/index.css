@@ -153,6 +153,15 @@
   .game-coin__shine { width: .22rem; height: 55%; border-radius: 999px; background: hsl(var(--game-cloud) / .65); }
   .game-coin__sprout { position: absolute; bottom: -.6rem; right: -.35rem; color: hsl(var(--game-pipe-dark)); font-size: .7rem; }
 
+  .game-can { position: relative; display: inline-flex; width: 1.7rem; height: 2.4rem; flex: 0 0 auto; align-items: center; justify-content: center; overflow: hidden; border: 3px solid hsl(var(--game-ink)); border-radius: .45rem .45rem .3rem .3rem; background: linear-gradient(90deg, hsl(var(--game-can-dark)) 0 13%, hsl(var(--game-can)) 13% 35%, hsl(var(--game-can-light)) 35% 60%, hsl(var(--game-can)) 60% 85%, hsl(var(--game-can-dark)) 85% 100%); box-shadow: 3px 3px 0 hsl(var(--game-ink)); animation: coin-bob 2.6s ease-in-out infinite; }
+  .game-can__lid { position: absolute; left: .06rem; right: .06rem; top: .06rem; height: .38rem; border: 2px solid hsl(var(--game-ink)); border-radius: 999px; background: hsl(var(--game-can-light)); }
+  .game-can__label { position: absolute; left: -.3rem; right: -.3rem; top: 40%; height: 38%; display: flex; align-items: center; justify-content: center; border-top: 2px solid hsl(var(--game-ink)); border-bottom: 2px solid hsl(var(--game-ink)); background: hsl(var(--game-pipe)); color: hsl(var(--game-cloud)); font-size: .55rem; line-height: 1; }
+  .game-can__shine { position: absolute; left: .3rem; top: .55rem; bottom: .28rem; width: .16rem; border-radius: 999px; background: hsl(var(--game-cloud) / .6); }
+  .game-can--small { width: 1.15rem; height: 1.65rem; border-width: 2px; border-radius: .3rem .3rem .2rem .2rem; box-shadow: 2px 2px 0 hsl(var(--game-ink)); }
+  .game-can--small .game-can__lid { height: .24rem; border-width: 1px; }
+  .game-can--small .game-can__label { top: 36%; height: 40%; border-width: 1px; font-size: .38rem; }
+  .game-can--small .game-can__shine { left: .2rem; top: .38rem; bottom: .18rem; width: .1rem; }
+
   .game-panel { border: 4px solid hsl(var(--game-ink)); background: hsl(var(--game-cloud)); box-shadow: 8px 8px 0 hsl(var(--game-ink)); }
   .game-panel__title { display: flex; align-items: center; gap: .75rem; border-bottom: 4px solid hsl(var(--game-ink)); background: hsl(var(--game-brick)); color: hsl(var(--game-cloud)); padding: 1rem 1.25rem; }
   .game-score-cell { min-width: 0; padding: 1.25rem; text-align: center; }
