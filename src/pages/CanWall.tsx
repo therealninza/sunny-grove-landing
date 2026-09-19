@@ -261,6 +261,11 @@ const CanWall = () => {
                 {totalCans.toLocaleString()}
               </p>
               <p className="game-note mt-2">LOCKED AT $0.10 CAD EACH</p>
+              {satsPerCan !== null && (
+                <p className="game-note mt-2">
+                  1 CAN ≈ {satsPerCan.toLocaleString()} SATS RIGHT NOW
+                </p>
+              )}
           </article>
         </section>
 
