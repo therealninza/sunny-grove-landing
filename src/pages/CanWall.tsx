@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bitcoin, Hash, Loader2, TrendingUp, TrendingDown } from "lucide-react";
+import { ArrowLeft, Bitcoin, Hash, Loader2, Sparkles, TrendingUp, TrendingDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const BTC_ADDRESS = "bc1q7pza7k7xme4yzt84n87mr47r0ugpwdcukclh9y";
