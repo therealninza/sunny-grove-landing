@@ -185,7 +185,7 @@ const CanWall = () => {
           <p className="game-pixel text-[9px] sm:text-xs text-game-ink mb-4">FROG CHILLING PLACE PRESENTS</p>
           <h1 className="game-pixel text-3xl sm:text-5xl md:text-6xl text-game-cloud game-title-shadow mb-6">THE CAN WALL</h1>
           <p className="max-w-2xl mx-auto text-sm sm:text-base font-bold text-game-ink bg-game-cloud/90 border-4 border-game-ink px-5 py-4 game-hard-shadow">
-            Every treasury donation becomes a permanent can collectible, locked at its value on the day it arrived.
+            This can wall commemorates donations for the life of the project — each donation is represented in the amount of cans returned. The treasury supports the operation of the project and serves as a transparent overview of the project's finances.
           </p>
         </section>
 
