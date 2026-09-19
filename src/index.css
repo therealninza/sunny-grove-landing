@@ -175,6 +175,12 @@
   @media (min-width: 640px) {
     .game-score-cell + .game-score-cell { border-top: 0; border-left: 4px solid hsl(var(--game-ink)); }
   }
+  @media (max-width: 639px) {
+    .game-cloud--one { top: 8.5rem; left: -2rem; transform: scale(.8); }
+    .game-cloud--two { top: 12.5rem; right: -3rem; transform: scale(.7); }
+    .game-cloud--three { display: none; }
+    .game-donation > .game-coin { animation-name: donation-coin-bob; }
+  }
   @media (prefers-reduced-motion: reduce) {
     .game-coin { animation: none; }
     .game-block, .game-donation { transition: none; }
@@ -184,4 +190,9 @@
 @keyframes coin-bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
+}
+
+@keyframes donation-coin-bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
 }
