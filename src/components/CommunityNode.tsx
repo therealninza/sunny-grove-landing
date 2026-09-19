@@ -30,11 +30,7 @@ export const CommunityNode = () => {
         Community node
       </span>
 
-      <h3 className="mt-4 text-2xl md:text-3xl font-bold text-primary-foreground">
-        A building people can build in
-      </h3>
-
-      <p className="mt-3 max-w-3xl text-primary-foreground/70 leading-relaxed">
+      <p className="mt-4 max-w-3xl text-lg text-primary-foreground/80 leading-relaxed">
         An agrivoltaic roof, heated growing rooms, a small library, sound system, radio
         station, and space for workshops, school programs, and whatever people decide to
         build next.
