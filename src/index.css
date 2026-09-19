@@ -175,7 +175,7 @@
   .game-block--brick { background: hsl(var(--game-brick)); color: hsl(var(--game-cloud)); }
   .game-block--question { background: hsl(var(--game-coin)); }
   .game-block--pipe { background: hsl(var(--game-pipe)); color: hsl(var(--game-cloud)); }
-  .game-question { position: absolute; right: .7rem; top: -.9rem; color: hsl(var(--game-brick-dark) / .22); font-size: 7rem; line-height: 1; font-weight: 900; }
+  .game-block-mark { position: absolute; right: .45rem; top: -1.05rem; opacity: .26; transform: scale(2.7); transform-origin: center; pointer-events: none; }
   .game-stat { position: relative; margin-top: .8rem; font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; overflow-wrap: anywhere; }
   .game-stat span { font-family: "Courier New", ui-monospace, monospace; font-size: .65rem; }
 
