@@ -115,6 +115,9 @@
     --game-grass: 91 65% 48%;
     --game-positive: 125 71% 27%;
     --game-negative: 3 75% 40%;
+    --game-can: 203 14% 80%;
+    --game-can-light: 200 24% 95%;
+    --game-can-dark: 203 14% 58%;
     background-color: hsl(var(--game-sky));
     background-image: url("/__l5e/assets-v1/e37dc21d-1fbc-49c1-8c4e-fee079d7086e/can-wall-sky.png");
     background-repeat: repeat;
