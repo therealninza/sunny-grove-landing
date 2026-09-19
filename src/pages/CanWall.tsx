@@ -13,6 +13,16 @@ const Coin = ({ small = false }: { small?: boolean }) => (
   </span>
 );
 
+const Can = ({ small = false }: { small?: boolean }) => (
+  <span className={small ? "game-can game-can--small" : "game-can"} aria-hidden="true">
+    <span className="game-can__lid" />
+    <span className="game-can__tab" />
+    <span className="game-can__label">✦</span>
+    <span className="game-can__rim" />
+    <span className="game-can__shine" />
+  </span>
+);
+
 
 interface AddressData {
   chain_stats: {
@@ -237,7 +247,7 @@ const CanWall = () => {
           </article>
 
           <article className="game-block game-block--question">
-              <span className="game-question" aria-hidden="true">?</span>
+              <span className="game-block-mark"><Can /></span>
               <div className="game-label flex items-center justify-center gap-2"><Hash className="h-4 w-4" /> TRANSACTIONS</div>
               <p className="game-stat">
                 {addressData?.chain_stats.funded_txo_count ?? 0}
@@ -281,7 +291,7 @@ const CanWall = () => {
               >
                   <Coin />
                   <div className="flex items-start justify-between gap-3 mb-5 pt-1">
-                    <span className="game-pixel text-2xl text-game-brick-dark" aria-hidden="true">?</span>
+                    <Can />
                     <span className="game-pixel text-[8px] text-game-ink text-right leading-relaxed">
                       {formatDate(tx.status.block_time)}
                     </span>
