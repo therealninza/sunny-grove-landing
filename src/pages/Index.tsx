@@ -4,6 +4,7 @@ import { Features } from "@/components/Features";
 import { Stats } from "@/components/Stats";
 import { CTA } from "@/components/CTA";
 import { GreenhouseSlideshow } from "@/components/GreenhouseSlideshow";
+import { CommunityNode } from "@/components/CommunityNode";
 
 const Index = () => {
   return (
@@ -35,6 +36,7 @@ const Index = () => {
                 Download Blender File
               </a>
             </div>
+            <CommunityNode />
           </div>
         </div>
       </div>
