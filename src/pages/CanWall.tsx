@@ -16,7 +16,9 @@ const Coin = ({ small = false }: { small?: boolean }) => (
 const Can = ({ small = false }: { small?: boolean }) => (
   <span className={small ? "game-can game-can--small" : "game-can"} aria-hidden="true">
     <span className="game-can__lid" />
+    <span className="game-can__tab" />
     <span className="game-can__label">✦</span>
+    <span className="game-can__rim" />
     <span className="game-can__shine" />
   </span>
 );
