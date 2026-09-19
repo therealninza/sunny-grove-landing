@@ -132,6 +132,11 @@ const CanWall = () => {
   const totalGainLossPercent = totalCostBasis > 0 ? (totalGainLoss / totalCostBasis) * 100 : 0;
   const hasCostData = Object.keys(historicalPrices).length > 0;
 
+  // Live exchange rate: how many sats one $0.10 CAD can costs right now
+  const satsPerCan = btcCadPrice
+    ? Math.round((CAN_PRICE_CAD / btcCadPrice) * 1e8)
+    : null;
+
   const satsToCans = (sats: number, priceCad?: number | null) => {
     const price = priceCad ?? btcCadPrice;
     if (!price) return 0;
@@ -256,6 +261,11 @@ const CanWall = () => {
                 {totalCans.toLocaleString()}
               </p>
               <p className="game-note mt-2">LOCKED AT $0.10 CAD EACH</p>
+              {satsPerCan !== null && (
+                <p className="game-note mt-2">
+                  1 CAN ≈ {satsPerCan.toLocaleString()} SATS RIGHT NOW
+                </p>
+              )}
           </article>
         </section>
 
