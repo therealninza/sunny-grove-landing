@@ -13,12 +13,6 @@ const Coin = ({ small = false }: { small?: boolean }) => (
   </span>
 );
 
-const Cloud = ({ className }: { className: string }) => (
-  <span className={`game-cloud ${className}`} aria-hidden="true">
-    <span />
-    <span />
-  </span>
-);
 
 interface AddressData {
   chain_stats: {
@@ -173,10 +167,6 @@ const CanWall = () => {
 
   return (
     <main className="can-game min-h-screen relative overflow-hidden pb-36">
-      <Cloud className="game-cloud--one" />
-      <Cloud className="game-cloud--two" />
-      <Cloud className="game-cloud--three" />
-
       <header className="relative z-20 border-b-4 border-game-ink bg-game-sky-deep/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-3">
           <Link to="/">
@@ -195,7 +185,7 @@ const CanWall = () => {
           <p className="game-pixel text-[9px] sm:text-xs text-game-ink mb-4">FROG CHILLING PLACE PRESENTS</p>
           <h1 className="game-pixel text-3xl sm:text-5xl md:text-6xl text-game-cloud game-title-shadow mb-6">THE CAN WALL</h1>
           <p className="max-w-2xl mx-auto text-sm sm:text-base font-bold text-game-ink bg-game-cloud/90 border-4 border-game-ink px-5 py-4 game-hard-shadow">
-            Every treasury donation becomes a permanent can collectible, locked at its value on the day it arrived.
+            This can wall commemorates donations for the life of the project — each donation is represented in the amount of cans returned. The treasury supports the operation of the project and serves as a transparent overview of the project's finances.
           </p>
         </section>
 
