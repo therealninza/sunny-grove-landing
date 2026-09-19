@@ -167,10 +167,6 @@ const CanWall = () => {
 
   return (
     <main className="can-game min-h-screen relative overflow-hidden pb-36">
-      <Cloud className="game-cloud--one" />
-      <Cloud className="game-cloud--two" />
-      <Cloud className="game-cloud--three" />
-
       <header className="relative z-20 border-b-4 border-game-ink bg-game-sky-deep/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-3">
           <Link to="/">
