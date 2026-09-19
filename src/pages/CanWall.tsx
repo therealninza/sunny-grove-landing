@@ -245,7 +245,7 @@ const CanWall = () => {
           </article>
 
           <article className="game-block game-block--question">
-              <span className="game-question" aria-hidden="true">?</span>
+              <span className="game-block-mark"><Can /></span>
               <div className="game-label flex items-center justify-center gap-2"><Hash className="h-4 w-4" /> TRANSACTIONS</div>
               <p className="game-stat">
                 {addressData?.chain_stats.funded_txo_count ?? 0}
