@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Bitcoin, Hash, Loader2, TrendingUp, TrendingDown } from "lucide-react";
+import { ArrowLeft, Bitcoin, Hash, Loader2, Sparkles, TrendingUp, TrendingDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const BTC_ADDRESS = "bc1q7pza7k7xme4yzt84n87mr47r0ugpwdcukclh9y";
@@ -184,9 +184,32 @@ const CanWall = () => {
           <div className="flex justify-center gap-5 mb-5"><Coin small /><Coin /><Coin small /></div>
           <p className="game-pixel text-[9px] sm:text-xs text-game-ink mb-4">FROG CHILLING PLACE PRESENTS</p>
           <h1 className="game-pixel text-3xl sm:text-5xl md:text-6xl text-game-cloud game-title-shadow mb-6">THE CAN WALL</h1>
-          <p className="max-w-2xl mx-auto text-sm sm:text-base font-bold text-game-ink bg-game-cloud/90 border-4 border-game-ink px-5 py-4 game-hard-shadow">
-            This can wall commemorates donations for the life of the project — each donation is represented in the amount of cans returned. The treasury supports the operation of the project and serves as a transparent overview of the project's finances.
-          </p>
+          <div className="game-panel max-w-2xl mx-auto text-left">
+            <div className="game-panel__title">
+              <Sparkles className="h-5 w-5" />
+              <h2 className="game-pixel text-[10px] sm:text-sm">LEVEL BRIEFING</h2>
+            </div>
+            <div className="space-y-3 px-5 py-5 text-sm sm:text-base font-bold leading-relaxed text-game-ink">
+              <p>
+                Every can on this wall is a donation that came back as change. Bitcoin arrives, the treasury
+                cashes it out at <span className="game-hl">$0.10 CAD a can</span>, and those cans pay for the
+                lights, the heat and the day-to-day of the greenhouse.
+              </p>
+              <p>
+                Not a fundraising poster — a receipt. Each can is a real on-chain payment, locked at the price
+                of bitcoin the day it landed, and the whole wall is public for the life of the project.
+              </p>
+              <p className="game-pixel text-[10px] sm:text-xs text-game-ink">
+                ▶ COLLECT THE CANS · KEEP THE FROGS CHILLIN'
+              </p>
+            </div>
+            <div className="game-chip-strip">
+              <span className="game-chip">1 CAN = $0.10 CAD</span>
+              <span className="game-chip">ON-CHAIN RECEIPTS</span>
+              <span className="game-chip">OPEN BOOKS</span>
+              <span className="game-chip game-chip--go">PRESS START</span>
+            </div>
+          </div>
         </section>
 
         {hasCostData && btcCadPrice && (
