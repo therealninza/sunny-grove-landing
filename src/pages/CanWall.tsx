@@ -185,7 +185,7 @@ const CanWall = () => {
           <p className="game-pixel text-[9px] sm:text-xs text-game-ink mb-4">FROG CHILLING PLACE PRESENTS</p>
           <h1 className="game-pixel text-3xl sm:text-5xl md:text-6xl text-game-cloud game-title-shadow mb-6">THE CAN WALL</h1>
           <p className="max-w-2xl mx-auto text-sm sm:text-base font-bold text-game-ink bg-game-cloud/90 border-4 border-game-ink px-5 py-4 game-hard-shadow">
-            This can wall commemorates donations for the life of the project — each donation is represented in the amount of cans returned. The treasury supports the operation of the project and serves as a transparent overview of the project's finances.
+            Every donation to the greenhouse treasury is commemorated here. Each transaction is converted to its equivalent in cans — because every little bit counts. 🌱
           </p>
         </section>
 
