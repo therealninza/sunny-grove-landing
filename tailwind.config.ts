@@ -19,6 +19,14 @@ export default {
     },
     extend: {
       colors: {
+        game: {
+          ink: "hsl(var(--game-ink))",
+          cloud: "hsl(var(--game-cloud))",
+          "brick-dark": "hsl(var(--game-brick-dark))",
+          pipe: "hsl(var(--game-pipe))",
+          positive: "hsl(var(--game-positive))",
+          negative: "hsl(var(--game-negative))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
