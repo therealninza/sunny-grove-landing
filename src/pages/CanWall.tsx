@@ -13,6 +13,14 @@ const Coin = ({ small = false }: { small?: boolean }) => (
   </span>
 );
 
+const Can = ({ small = false }: { small?: boolean }) => (
+  <span className={small ? "game-can game-can--small" : "game-can"} aria-hidden="true">
+    <span className="game-can__lid" />
+    <span className="game-can__label">✦</span>
+    <span className="game-can__shine" />
+  </span>
+);
+
 
 interface AddressData {
   chain_stats: {
