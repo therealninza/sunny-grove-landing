@@ -67,8 +67,7 @@ const Overview = () => {
             <section className="bg-forest-panel border border-forest-border/60 rounded-2xl p-6 md:p-8">
               <p className="text-lg text-forest-text/90 leading-relaxed">
                 Developing and building an open source, solar powered bitcoin mining greenhouse on Haida
-                Gwaii, the traditional territory of the Haida People, off the coast of British Columbia,
-                Canada.
+                Gwaii, the traditional territory of the Haida People
               </p>
             </section>
 
