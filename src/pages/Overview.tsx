@@ -64,6 +64,37 @@ const Overview = () => {
           </TabsList>
 
           <TabsContent value="overview" className="space-y-12">
+            <section className="bg-forest-panel border border-forest-border/60 rounded-2xl p-6 md:p-8">
+              <p className="text-lg text-forest-text/90 leading-relaxed">
+                Developing and building an open source, solar powered bitcoin mining greenhouse on Haida
+                Gwaii, the traditional territory of the Haida People, off the coast of British Columbia,
+                Canada.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-forest-text">
+                Food, Energy &amp; Monetary Sovereignty
+              </h2>
+              <p className="text-forest-text/80 leading-relaxed">
+                The Haida people currently live downstream from food and energy, power is provided by diesel
+                generators, food sometimes shipped across Canada. Kiernan hopes his project can empower the
+                first nations people of Canada to become sovereign again by producing their own food,
+                energy, and secure sound money, as Bitcoin is the heart of this project. The open-source
+                greenhouse will eventually provide food, jobs, and stability to the Haida Gwaii nation.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold mb-4 text-forest-text">Built in the Longhouse Style</h2>
+              <p className="text-forest-text/80 leading-relaxed">
+                The greenhouses will be built in the longhouse style of the Haida Gwaii. The roofs of the
+                structures are large and will be covered with solar panels, the panels will provide energy to
+                the Bitcoin miners and any excess will be sold back to the grid. The miners housed inside
+                will provide heat for the growing operations, allowing growers to plant an array of crops.
+              </p>
+            </section>
+
             <section>
               <p className="text-lg text-forest-text/90 leading-relaxed">
                 Imagine a space in Haida Gwaii where the community can come together year-round to grow fresh food, learn traditional practices, and strengthen bonds across generations. An indoor community garden could transform how Haida Gwaii connects with the land, preserves culture, and supports wellness—all in one green, thriving space.
