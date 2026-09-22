@@ -5,3 +5,4 @@
 - [x] Overview: replace the "Growing Together" subtitle with "A community garden for Haida Gwaii and beyond!!!"
 
 - [x] Overview: add the Haida Gwaii project description (open-source solar bitcoin mining greenhouse, sovereignty, longhouse style)
+- [x] mine2us: swap Zappool link for BTC address + CK solo pool setup link
