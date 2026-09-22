@@ -81,14 +81,41 @@ export const SolarTicker = () => {
                 </code>
               </div>
             </div>
-            <a
-              href="https://zappool.org/quick.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-xs text-blue-400 hover:underline bg-blue-500/10 p-2 rounded"
-            >
-              <span className="font-medium">Small home miner?</span> Join our Zappool →
-            </a>
+            {/* Zappool link parked for now — restore this block to bring it back:
+              <a href="https://zappool.org/quick.html" target="_blank" rel="noopener noreferrer"
+                 className="block text-xs text-blue-400 hover:underline bg-blue-500/10 p-2 rounded">
+                <span className="font-medium">Small home miner?</span> Join our Zappool →
+              </a>
+            */}
+            <div className="text-xs space-y-2 bg-amber-500/10 p-2 rounded">
+              <div>
+                <span className="font-medium">Our Bitcoin address:</span>
+                <div className="flex items-center gap-2 bg-muted p-1.5 rounded mt-1">
+                  <code className="text-[10px] break-all flex-1 leading-tight">
+                    {BITCOIN_ADDRESS}
+                  </code>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="h-6 w-6 p-0 shrink-0"
+                    onClick={() => {
+                      navigator.clipboard.writeText(BITCOIN_ADDRESS);
+                      toast({ title: "Copied!", description: "Bitcoin address copied to clipboard" });
+                    }}
+                  >
+                    <Copy className="h-3 w-3" />
+                  </Button>
+                </div>
+              </div>
+              <a
+                href="https://solo.ckpool.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-blue-400 hover:underline"
+              >
+                Set up the CK solo pool →
+              </a>
+            </div>
             <div className="space-y-1">
               <span className="text-xs font-medium">Zap us on Nostr:</span>
               <div className="flex items-center gap-2 bg-muted p-2 rounded">
