@@ -26,7 +26,7 @@ const Overview = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,hsl(120_35%_16%),transparent)]" />
         <div className="max-w-5xl mx-auto relative">
           <h1 className="text-4xl md:text-6xl font-bold text-forest-text mb-4 tracking-tight">
-            Rise Together <span className="text-forest-accent">First Nations</span>
+            Frog Chilling <span className="text-forest-accent">Place</span>
           </h1>
           <p className="text-xl text-forest-muted max-w-2xl leading-relaxed">
             A community garden for Haida Gwaii and beyond!!!
