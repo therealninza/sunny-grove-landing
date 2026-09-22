@@ -29,7 +29,7 @@ const Overview = () => {
             Rise Together <span className="text-forest-accent">First Nations</span>
           </h1>
           <p className="text-xl text-forest-muted max-w-2xl leading-relaxed">
-            "Growing Together: An Indoor Community Garden for Haida Nation"
+            A community garden for Haida Gwaii and beyond!!!
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <span className="px-4 py-1.5 rounded-full bg-forest-panel-2 border border-forest-border text-forest-accent-bright text-sm font-medium flex items-center gap-2">
