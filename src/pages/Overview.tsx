@@ -389,7 +389,7 @@ const Overview = () => {
                   <h3 className="text-2xl font-bold mb-4 text-forest-text">Open Source</h3>
                   <div className="bg-forest-panel p-6 rounded-2xl border border-forest-border/60">
                     <p className="text-forest-text/80 leading-relaxed">
-                      The Frog Chilling Greenhouse Project and all its data will be open-sourced. This includes the structural design, heat capture engineering, solar output, food yield, and feedback. The aim is to allow others to copy and improve upon the project locally. The repository will be hosted on GitHub at (link to be provided).
+                      The Frog Chilling Greenhouse Project is open-source. This includes the structural design, heat capture engineering, agrivoltaic solar output, food yield, and feedback. The aim is to allow others to copy and improve upon the project locally. The repository will is hosted on GitHub at.
                     </p>
                   </div>
                 </div>
