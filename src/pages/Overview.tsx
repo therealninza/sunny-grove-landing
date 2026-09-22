@@ -77,7 +77,7 @@ const Overview = () => {
               </h2>
               <p className="text-forest-text/80 leading-relaxed">
                 The Haida people currently live downstream from food and energy, power is provided by diesel
-                generators, food sometimes shipped across Canada. Kiernan hopes his project can empower the
+                generators, food sometimes shipped across Canada. This project can empower the
                 first nations people of Canada to become sovereign again by producing their own food,
                 energy, and secure sound money, as Bitcoin is the heart of this project. The open-source
                 greenhouse will eventually provide food, jobs, and stability to the Haida Gwaii nation.
