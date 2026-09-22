@@ -64,7 +64,7 @@ export const SolarTicker = () => {
             mine2us
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-64 p-3">
+        <PopoverContent className="w-72 p-3">
           <div className="space-y-3">
             <h4 className="font-medium text-sm">Mining Information</h4>
             <div className="text-xs space-y-2">
