@@ -266,6 +266,19 @@ const Overview = () => {
                   </p>
                 </div>
                 <div className="pt-4 border-t border-forest-border/60">
+                  <h3 className="text-xl font-bold mb-3 text-forest-text">Heat Recovery: Two Jobs for the Same Electrons</h3>
+                  <p className="mb-4 text-forest-text/80">
+                    Every kilowatt-hour that runs a miner does the work twice. An ASIC turns essentially all of the
+                    electricity it draws into heat, so the same electrons that earn Bitcoin for the project also warm the
+                    growing rooms below. There is no combustion, no flue, and no chimney full of wasted energy — what a
+                    conventional facility would have to pay to get rid of becomes the building's heating system. That
+                    doubles the useful work pulled from every kilowatt: one stream of electrons produces food and sats at
+                    the same time, and the heat does not have to be bought separately from fuel or resistance heating.
+                    On an island where power comes from diesel and food arrives by freight, capturing that heat is the
+                    difference between an expensive novelty and a greenhouse that can run through winter — solar energy
+                    that would otherwise be sold back for a fraction of its value becomes warmth for crops, income for the
+                    treasury, and proof that electricity can serve a community more than once.
+                  </p>
                   <p className="mb-3 font-semibold text-forest-text">Learn more about our project:</p>
                   <ul className="list-disc pl-6 space-y-2 marker:text-forest-accent">
                     <li>
