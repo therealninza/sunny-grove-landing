@@ -132,8 +132,7 @@ export const Hero = () => {
             Frog Chilling Place — A bitcoin powered community greenhouse project
           </h1>
           <p className="text-xl text-white/90 mb-8">
-            A greenhouse combining solar energy and ASIC mining to provide year-round food production. 
-            Contribute to sustainable agriculture and earn Bitcoin rewards from our mining operations.
+            Greenhouses combining solar energy and ASIC mining to provide year-round food production and income. Contribute to sustainable agriculture and earn Bitcoin rewards from our mining operations by supporting our project. 
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
