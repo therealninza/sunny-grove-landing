@@ -29,7 +29,7 @@ export const CTA = () => {
     <div className="bg-accent py-16">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-          Join Our Innovative Project
+          Always free, always open source
         </h2>
         <div className="flex items-center justify-center gap-3 flex-wrap">
           {socials.map(({ label, href, Icon }) => (
