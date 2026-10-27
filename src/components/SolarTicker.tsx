@@ -107,14 +107,24 @@ export const SolarTicker = () => {
                   </Button>
                 </div>
               </div>
-              <a
-                href="https://solo.ckpool.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-blue-400 hover:underline"
-              >
-                Set up the CK solo pool →
-              </a>
+              <div className="flex flex-col gap-1 pt-1">
+                <a
+                  href="https://solo.ckpool.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline"
+                >
+                  Set up the CK solo pool →
+                </a>
+                <a
+                  href={`https://stats.ckpool.org/users/${BITCOIN_ADDRESS}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline"
+                >
+                  View our live solo stats →
+                </a>
+              </div>
             </div>
             <div className="space-y-1">
               <span className="text-xs font-medium">Zap us on Nostr:</span>
